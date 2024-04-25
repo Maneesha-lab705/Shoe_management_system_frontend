@@ -1,0 +1,65 @@
+/*!*.form-control-input{*!*/
+/*!*    border-radius: 10px;*!*/
+/*!*    outline: 0;*!*/
+
+/*!*}*!*/
+/*body{*/
+/*    overflow-x: hidden;*/
+/*}*/
+/*.form-label{*/
+/*    position: relative;*/
+/*    top: 10vh;*/
+/*    color: black;*/
+
+/*}*/
+
+.radio{
+    position: relative;
+    right: 10vw;
+}
+.clabel{
+    position: relative;
+    right: 20vw;
+    color: black;
+}
+#customer-section{
+    position: absolute;
+    top: 10vh;
+    left: 5vw;
+}
+
+.input{
+        top: 0;
+        font-family: inherit;
+        width: 50%;
+        border: 0;
+        border-bottom: 2px solid red;
+        outline: 0;
+        font-size: 1rem;
+        color: red;
+        padding: 7px 0;
+        background: transparent;
+        transition: 0.2s;
+}
+/*.form-control-input{*/
+/*    top: 0;*/
+/*    font-family: inherit;*/
+/*    width: 10%;*/
+/*    border: 0;*/
+/*    border-bottom: 2px solid red;*/
+/*    outline: 0;*/
+/*    font-size: 0.5rem;*/
+/*    color: red;*/
+/*    padding: 7px 0;*/
+/*    background: transparent;*/
+/*    transition: 0.2s;*/
+/*}*/
+.title{
+    color: #ff253a;
+}
+/*.title1{*/
+/*    color: #0a53be;*/
+/*}*/
+/*#total-text,.unit{*/
+/*    color: #0dcaf0;*/
+/*}*/

@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="keywords" content="HTML,CSS,Java Script, Pos System,maneesha">
+    <meta name="description" content="Pos System details and my Pos System website.">
+    <meta name="revised" content="22/4/2024">
+    <meta name="author" content="Maneesha dilshan">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="assets/lib/fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="assets/lib/normalize.css">
+    <link rel="stylesheet" href="assets/lib/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/styles/registerForm.css">
+    <link rel="stylesheet" href="assets/styles/dashbord.css">
+    <link rel="stylesheet" href="assets/styles/customer.css">
+    <link rel="stylesheet" href="assets/styles/stylesForCustomer.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css">
+
+</head>
+<body>
+
+<!-- -&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;nav bar section&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;-->
+<!-- Navbar  -->
+<nav class="navbar fixed-top navbar-expand-lg navbar-dark p-md-3">
+    <div class="container">
+        <a class="navbar-brand" href="#">Web Zone</a>
+        <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarNav"
+                aria-controls="navbarNav"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+        >
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <div class="mx-auto"></div>
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link text-white" id="home" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" id="customer" href="#">Customer</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="#">Employee</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="#">Suppliyer</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="#">Inventory</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<!---------------------register form section-------->
+<section class="vh-100 fixed-bottom" id="register_section">
+    <div class="container h-50">
+        <div class="row d-flex justify-content-center align-items-center h-100">
+            <div class="col-lg-12 col-xl-11">
+                <div class="card text-black" id="cards" style="border-radius: 25px;">
+                    <div class="card-body p-md-5">
+                        <div class="row justify-content-center">
+                            <div class="col-md-10 col-lg-6 col-xl-5 order-2 order-lg-1">
+
+                                <p class="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4">Sign up</p>
+
+                                <form class="mx-1 mx-md-4">
+
+                                    <div class="d-flex flex-row align-items-center mb-4">
+                                        <i class="fas fa-user fa-lg me-3 fa-fw"></i>
+                                        <div data-mdb-input-init class="form-outline flex-fill mb-0">
+                                            <input type="text" id="form3Example1c" class="form-control" />
+                                            <label class="form-label" for="form3Example1c">Your Role</label>
+                                        </div>
+                                    </div>
+
+                                    <div class="d-flex flex-row align-items-center mb-4">
+                                        <i class="fas fa-envelope fa-lg me-3 fa-fw"></i>
+                                        <div data-mdb-input-init class="form-outline flex-fill mb-0">
+                                            <input type="email" id="form3Example3c" class="form-control" />
+                                            <label class="form-label" for="form3Example3c">Your Email</label>
+                                        </div>
+                                    </div>
+
+                                    <div class="d-flex flex-row align-items-center mb-4">
+                                        <i class="fas fa-lock fa-lg me-3 fa-fw"></i>
+                                        <div data-mdb-input-init class="form-outline flex-fill mb-0">
+                                            <input type="password" id="form3Example4c" class="form-control" />
+                                            <label class="form-label" for="form3Example4c">Password</label>
+                                        </div>
+                                    </div>
+
+                                    <div class="d-flex flex-row align-items-center mb-4">
+                                        <i class="fas fa-key fa-lg me-3 fa-fw"></i>
+                                        <div data-mdb-input-init class="form-outline flex-fill mb-0">
+                                            <input type="password" id="form3Example4cd" class="form-control" />
+                                            <label class="form-label" for="form3Example4cd">Repeat your password</label>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-check d-flex justify-content-center mb-5">
+                                        <input class="form-check-input me-2" type="checkbox" value="" id="form2Example3c" />
+                                            I agree all statements in <a href="#!">Terms of service</a>
+                                        </label>
+                                    </div>
+
+                                    <div class="d-flex justify-content-center mx-4 mb-3 mb-lg-4">
+                                        <button type="button" data-mdb-button-init data-mdb-ripple-init class="btn btn-primary btn-lg" id="reg-button">Register</button>
+                                    </div>
+
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-------------------------loging section--------------------->
+
+    <section class="myform-area" id="login">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="form-area login-form">
+                        <div class="form-content">
+                            <h2>Login</h2>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla non aperiam cum quas quod reprehenderit.</p>
+                            <ul>
+                                <li><a href="#" class="facebook"><i class="fa fa-facebook-f"></i><span>facebook</span></a></li>
+                                <li><a href="#" class="twitter"><i class="fa fa-twitter"></i><span>twitter</span></a></li>
+                            </ul>
+                        </div>
+                        <div class="form-input">
+                            <h2>Login Form</h2>
+                            <form>
+                                <div class="form-group">
+                                    <input type="text"  name="name" required>
+                                    <label>User Name</label>
+                                </div>
+                                <div class="form-group">
+                                    <input type="password"  name="password" required>
+                                    <label>password</label>
+                                </div>
+                                <div class="myform-button">
+                                    <button class="myform-btn" id="log">Login</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+<!--------------------------dashbord--------------------->
+<section>
+
+</section>
+<!----------------cuatomer section----------------->
+<!--<div id="customer-section" class="container">-->
+<!--    <div class="row">-->
+<!--        <div class="col">-->
+<!--            <h1 class="title">Customers Details</h1>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--    <div class="row">-->
+<!--        <div class="col col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12 data">-->
+<!--            <form>-->
+<!--                &lt;!&ndash;                <div class="mb-3">&ndash;&gt;-->
+<!--                &lt;!&ndash;                    <input class="form-control-input input" id="customer_id" type="text" placeholder="enter id" required>&ndash;&gt;-->
+<!--                &lt;!&ndash;&lt;!&ndash;                    <label for="customer_id" class="form-label">Customer_Id</label>&ndash;&gt;&ndash;&gt;-->
+<!--                &lt;!&ndash;                </div>&ndash;&gt;-->
+<!--                <div class="mb-3">-->
+<!--                    <input id="name" class="form-control-input input" type="text" placeholder="enter name" required>-->
+<!--                    &lt;!&ndash;                    <label class="form-label" for="name">Name</label>&ndash;&gt;-->
+<!--                </div>-->
+
+<!--                <div class="mb-3">-->
+<!--                    <input id="date" class="form-control-input input" type="date" placeholder="enter join date" required>-->
+<!--                    &lt;!&ndash;                    <label class="form-label" for="email">E-mail</label>&ndash;&gt;-->
+<!--                </div>-->
+<!--                <div class="mb-3">-->
+<!--                    <input id="levels" class="form-control-input input" type="number" placeholder="enter level" required>-->
+<!--                    &lt;!&ndash;                    <label class="form-label" for="phone">Contact Number</label>&ndash;&gt;-->
+<!--                </div>-->
+<!--                <select name="Level" id="level" >Level</select>-->
+
+
+<!--            </form>-->
+<!--            <form id="nextform">-->
+<!--                &lt;!&ndash;                <div class="mb-3">&ndash;&gt;-->
+<!--                &lt;!&ndash;                    <input class="form-control-input input" id="customer_id" type="text" placeholder="enter id" required>&ndash;&gt;-->
+<!--                &lt;!&ndash;&lt;!&ndash;                    <label for="customer_id" class="form-label">Customer_Id</label>&ndash;&gt;&ndash;&gt;-->
+<!--                &lt;!&ndash;                </div>&ndash;&gt;-->
+<!--                <div class="mb-3">-->
+<!--                    <input id="point" class="form-control-input input" type="number" placeholder="enter Total points" required>-->
+<!--                    &lt;!&ndash;                    <label class="form-label" for="name">Name</label>&ndash;&gt;-->
+<!--                </div>-->
+<!--                <div class="mb-3">-->
+<!--                    <input id="dob" class="form-control-input input" type="date" placeholder="enter Dob" required>-->
+<!--                    &lt;!&ndash;                    <label class="form-label" for="address">Address</label>&ndash;&gt;-->
+<!--                </div>-->
+<!--                <div class="mb-3">-->
+<!--                    <input id="address" class="form-control-input input" type="email" placeholder="enter  building no or-->
+<!--name" required>-->
+<!--                    &lt;!&ndash;                    <label class="form-label" for="email">E-mail</label>&ndash;&gt;-->
+<!--                </div>-->
+<!--                <div class="mb-3">-->
+<!--                    <input id="lane" class="form-control-input input" type="number" placeholder="enter  lane" required>-->
+<!--                    &lt;!&ndash;                    <label class="form-label" for="phone">Contact Number</label>&ndash;&gt;-->
+<!--                </div>-->
+<!--                <div class="mb-3">-->
+<!--                    <input id="city" class="form-control-input input" type="number" placeholder="enter  city" required>-->
+<!--                    &lt;!&ndash;                    <label class="form-label" for="phone">Contact Number</label>&ndash;&gt;-->
+<!--                </div>-->
+<!--                <div class="mb-3">-->
+<!--                    <input id="state" class="form-control-input input" type="number" placeholder="enter  state" required>-->
+<!--                    &lt;!&ndash;                    <label class="form-label" for="phone">Contact Number</label>&ndash;&gt;-->
+<!--                </div>-->
+<!--                <div class="mb-3">-->
+<!--                    <input id="code" class="form-control-input input" type="number" placeholder="enter  code" required>-->
+<!--                    &lt;!&ndash;                    <label class="form-label" for="phone">Contact Number</label>&ndash;&gt;-->
+<!--                </div>-->
+<!--                <div class="mb-3">-->
+<!--                    <input id="male" class="form-control-input input radio" type="radio" placeholder="enter gender" required>-->
+<!--                    <label class="form-label clabel" for="male">male</label>-->
+<!--                    <input id="female" class="form-control-input input radio" type="radio" placeholder="enter gender" required>-->
+<!--                    <label class="form-label clabel" for="female">female</label>-->
+<!--                </div>-->
+<!--                <div class="mt-4 mb-5" id="customer-batons">-->
+<!--                    <button type="button" class="btn btn-success">Save</button>-->
+<!--                    <button type="button" class="btn btn-primary">Update</button>-->
+<!--                    <button type="button" class="btn btn-danger">Delete</button>-->
+<!--                    <button type="reset" class="btn btn-warning">Clear</button>-->
+<!--                </div>-->
+<!--            </form>-->
+<!--        </div>-->
+<!--        <div class="col col-xl-6 col-lg-6  col-md-6 col-sm-12 col-12" id="table">-->
+<!--            <input type="text" class="form-control mt-3" id="customer-search" placeholder="Search by First Name">-->
+<!--            <table class="table mt-2" border="5px">-->
+<!--                <thead>-->
+<!--                <tr>-->
+<!--                    <th scope="col">Customer_Id</th>-->
+<!--                    <th scope="col">Name</th>-->
+<!--                    <th scope="col">Address</th>-->
+<!--                    <th scope="col">Email</th>-->
+<!--                    <th scope="col">Contact</th>-->
+<!--                </tr>-->
+<!--                </thead>-->
+<!--                <tbody id="customer-table-body">-->
+<!--                </tbody>-->
+<!--            </table>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--</div>-->
+<!-- Customer Start-->
+<main class="container-fluid" id="customer-section">
+    <!-- Customer Header Start -->
+    <div class="container d-flex flex-grow-1 flex-column justify-content-center">
+        <div class="position-relative d-inline-block mt-3 mt-lg-4 mt-md-4">
+            <h2 id="H1-3" style="font-family: 'Arial Rounded MT Bold',serif"><i class="bi bi-people"></i> Customer
+            </h2>
+        </div>
+    </div>
+    <!-- Customer Header End -->
+
+    <!-- Customer Header Section Start -->
+    <div class="container d-flex flex-grow-1 flex-column sectionBorder justify-content-center"  style="background-color: transparent">
+
+        <!-- Customer Details Section Start -->
+        <div class="row justify-content-around " style="height: max-content">
+
+
+
+            <!-- Customer Details Search Section Start -->
+            <div class="col-10 col-md-6 col-lg-5 p-0 mt-3 rounded-3 sectionBorder justify-content-md-center" style="background-color: white">
+                <!--            <div class="col-10 col-md-5 col-lg-5 p-0 mt-2 rounded-3 sectionBorder" style="background-color: white">-->
+
+                <form action="customer" id="customerForm">
+
+                    <div class="row mt-1">
+                        <div class="mb-3 ms-3 me-1 mt-3 col-10 col-md-5 col-lg-5 ">
+                            <label class="fw-bold" for="txtCusName">Customer Name :</label>
+                            <input class="form-control" id="txtCusName" type="text">
+                            <span class="control-error"></span>
+
+                        </div>
+
+                        <div class="mb-3 ms-1 me-3 mt-3 col-10 col-md-5 col-lg-6 ">
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                                <label class="form-check-label" for="flexRadioDefault1">
+                                    Male
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                                <label class="form-check-label" for="flexRadioDefault2">
+                                    Femail
+                                </label>
+                            </div>
+                        </div>
+                        <div class="mb-3 ms-3 me-1 mt-3 col-10 col-md-5 col-lg-5 ">
+                            <label class="fw-bold" for="level">Level :</label>
+                            <select aria-label="Default select example" class="form-select border-dark" id="level">
+                            </select>
+
+                            <label class="fw-bold" for="level">point :</label>
+                            <select aria-label="Default select example" class="form-select border-dark" id="point">
+                            </select>
+
+                        </div>
+                        <div class="mb-3 ms-3 me-1 mt-3 col-10 col-md-5 col-lg-5 ">
+                            <label class="fw-bold" for="contact">Contact :</label>
+                            <input class="form-control" id="contact" type="text">
+                            <span class="control-error"></span>
+                        </div>
+                    </div>
+
+                    <div class="row mt-1">
+                        <div class="mb-3 ms-3 me-1 mt-3 col-5 col-md-5 col-lg-5 ">
+                            <label class="fw-bold" for="JoinDate">Join Date :</label>
+                            <input class="form-control" id="JoinDate" type="date">
+                            <span class="control-error"></span>
+                        </div>
+
+<!--                        <div class="mb-3 ms-3 me-1 mt-3 col-10 col-md-5 col-lg-5 ">-->
+<!--                            <label class="fw-bold" for="level">Level :</label>-->
+<!--                            <select aria-label="Default select example" class="form-select border-dark" id="point">-->
+<!--                            </select>-->
+<!--                        </div>-->
+                    </div>
+
+                    <div class="row mt-1">
+                        <div class="mb-3 ms-3 me-1 mt-1 col-10 col-md-5 col-lg-5 ">
+                            <label class="fw-bold" for="dob">Date Of Birth :</label>
+                            <input class="form-control" id="dob" type="date">
+                            <span class="control-error"></span>
+                        </div>
+
+                    </div>
+
+                    <div class="mb-3 ms-3 me-3 mt-3 ">
+                        <label class="fw-bold" for="address">Address :</label>
+                        <input class="form-control" id="address" type="text">
+                        <span class="control-error"></span>
+                    </div>
+
+                    <div class="mb-3 ms-3 me-3 mt-3 ">
+                        <label class="fw-bold" for="email">Email :</label>
+                        <input class="form-control" id="email" type="text">
+                        <span class="control-error"></span>
+                    </div>
+
+                </form>
+
+
+            </div>
+            <!-- Customer Details Search Section Start -->
+            <!--            <div class="col-10 col-md-6 col-lg-5 p-0 mt-5 rounded-3 sectionBorder"-->
+            <div class="col-10 col-md-5 col-lg-5 p-0 mt-5 rounded-3 sectionBorder"
+                 style="background-color: white;height: max-content ">
+                <h4 class="text-center p-2 text-light rounded-3" style="background: #16A085">Manage Customer</h4>
+
+                <div class="mb-3 ms-3 me-3 mt-3 ">
+                    <label class="fw-bold" for="searchCusId">Search Customer :</label>
+                    <input class="form-control me-2 mt-2" id="searchCusId" placeholder="Input Name/NIC/Tp Here"
+                           type="search">
+                </div>
+                <div class="m-4">
+                    <button class="btn btn-success mt-2 m-2" id="btnSaveCustomer" type="button">+ New Customer
+                    </button>
+
+                    <button class="btn btn-warning mt-2 m-2" id="btnUpdateCustomer" type="button">Update Customer
+                    </button>
+
+                    <button class="btn btn-danger mt-2 m-2" id="btnDeleteCustomer" type="button">Delete Customer
+                    </button>
+
+                </div>
+            </div>
+            <!-- Customer Details Search Section End -->
+
+            <!-- Customer Details Search Section End -->
+
+        </div>
+        <!-- Customer Details Section End -->
+
+        <!-- View Customer Details Table Start -->
+        <div class="row mt-1 mt-md-2 mt-lg-4 justify-content-center" style="height: 40vh;">
+            <div class="col-11 justify-content-around sectionBorder" style="height: 290px; background: white">
+                <div class="customerTableDiv overflow-auto" style="height: 270px;">
+                    <table class="table table-success table-striped table-bordered table-hover">
+                        <thead class="text-light table-dark text-center  table-bordered sticky-top">
+                        <tr>
+                            <th>ID</th>
+                            <th>Name</th>
+                            <th>Gender</th>
+                            <th>Join date</th>
+                            <th>Level</th>
+                            <th>Total points</th>
+                            <th>Dob</th>
+                            <th>Addredd</th>
+                            <th>Contact</th>
+                            <th>Email</th>
+                            <th>Recent purchase date</th>
+                        </tr>
+                        </thead>
+                        <tbody id="customerTable"></tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <!-- View Customer Details Table End -->
+    </div>
+</main>
+<!-- Customer End-->
+<script type="module" src="assets/js/dashbord.js"></script>
+<script src="assets/lib/jquery.min.js"></script>
+<script src="assets/lib/bootstrap/js/bootstrap.min.js"></script>
+<script src="assets/lib/fontawesome/js/all.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+<script>
+
+
+    $('#login').css('display','none');
+    $('.navbar').css('display','none');
+    $('#customer-section').css('display','none');
+    // $('#register_section').css('display','none');
+
+    $('#txtCusName').on('click',()=>{
+        $('#txtCusName').css('background-color','#20c997');
+    });
+    $('#contact').on('click',()=>{
+        $('#contact').css('background-color','#20c997');
+
+    });
+    $('#address ').on('click',()=>{
+        $('#address').css('background-color','#20c997');
+
+    });
+    $('#email ').on('click',()=>{
+        $('#email').css('background-color','#20c997');
+    });
+    // $('#reg-button').on('click',()=>{
+    //     $('#register_section').css('display','none');
+    //     $('.navbar').css('display','none');
+    //     $('body').css('background-image','none');
+    //     $(document.body).css('background-image', 'url(assets/image/Wild.png)');
+    //
+    // })
+    $('#reg-button').on('click',()=>{
+        $('#register_section').css('display','none');
+        $('.navbar').css('display','none');
+        $('body').css('background-image','none');
+        $('#login').css('display','block');
+        // $(document.body).css('background-image', 'url(assets/image/Wild.png)');
+
+    })
+    $('#log').on('click',()=>{
+        $('#register_section').css('display','none');
+        $('.navbar').css('display','block');
+        $('#login').css('display','none');
+        // $(document.body).css('background-image', 'url(assets/image/Wild.png)');
+        $(document.body).css('background-color', 'black');
+        $('#dash').css('display','block');
+        $('.slide').css('display','block');
+
+    })
+    $('#customer').on('click',()=>{
+        $('#register_section').css('display','none');
+        $('.navbar').css('display','block');
+        $('#login').css('display','none');
+        $(document.body).css('background-image', 'url(assets/image/Wild.png)');
+        // $(document.body).css('background-color', '#8F0094');
+        $('#customer-section').css('display','block');
+
+        $(document).ready(function() {
+            // Function to perform the task when scrolling
+            function performTaskOnScroll() {
+                // $('#register_section').css('display', 'none');
+                $('.navbar').css('display', 'none');
+                // $('#login').css('display', 'none');
+                // $(document.body).css('background-image', 'url(assets/image/Wild.png)');
+                // // $(document.body).css('background-color', '#8F0094');
+                // $('#customer-section').css('display', 'block');
+                clearTimeout(scrollTimeout);
+                // Set a new timeout to show the navigation bar after 1 second (adjust as needed)
+                scrollTimeout = setTimeout(function() {
+                    $('.navbar').fadeIn();
+                }, 1500); // Adjust the delay time as needed
+            }
+            var scrollTimeout;
+
+            // Event listener for scroll
+            $(window).scroll(function() {
+                // Call the function when the user scrolls
+                performTaskOnScroll();
+            });
+
+            // Optionally, you can also call the function once when the page loads
+            performTaskOnScroll();
+        });
+
+    })
+
+
+</script>
+</body>
+</html>
