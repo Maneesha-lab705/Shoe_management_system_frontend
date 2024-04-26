@@ -8,3 +8,8 @@
 #customerTable tr:hover{
  background-color: red;
 }
+#cusIcon{
+    width: 100px;
+    height: 100px;
+}
+

@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="assets/styles/registerForm.css">
     <link rel="stylesheet" href="assets/styles/dashbord.css">
     <link rel="stylesheet" href="assets/styles/customer.css">
+    <link rel="stylesheet" href="assets/styles/employee.css">
     <link rel="stylesheet" href="assets/styles/stylesForCustomer.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css">
 
@@ -48,7 +49,7 @@
                     <a class="nav-link text-white" id="customer" href="#">Customer</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-white" href="#">Employee</a>
+                    <a class="nav-link text-white" id="employeebtn" href="#">Employee</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link text-white" href="#">Suppliyer</a>
@@ -332,13 +333,17 @@
                             <input class="form-control" id="contact" type="text">
                             <span class="control-error"></span>
                         </div>
-                    </div>
 
+                    </div>
                     <div class="row mt-1">
                         <div class="mb-3 ms-3 me-1 mt-3 col-5 col-md-5 col-lg-5 ">
                             <label class="fw-bold" for="JoinDate">Join Date :</label>
                             <input class="form-control" id="JoinDate" type="date">
                             <span class="control-error"></span>
+                        </div>
+
+                        <div class="mb-3 ms-3 me-1 mt-3 col-10 col-md-5 col-lg-5 ">
+                            <img id="cusIcon" src="assets/image/cusIcon.png" alt="customerICon">
                         </div>
 
 <!--                        <div class="mb-3 ms-3 me-1 mt-3 col-10 col-md-5 col-lg-5 ">-->
@@ -431,6 +436,213 @@
     </div>
 </main>
 <!-- Customer End-->
+<!-------------------employee----------------------------------->
+<main class="container-fluid" id="employee-section">
+    <!-- employee Header Start -->
+    <div class="container d-flex flex-grow-1 flex-column justify-content-center" id="emHeader">
+        <div class="position-relative d-inline-block mt-3 mt-lg-4 mt-md-4">
+            <h2 id="H1-4" style="font-family: 'Arial Rounded MT Bold',serif"><i class="bi bi-people"></i> Employee
+            </h2>
+        </div>
+    </div>
+    <!-- employee Header End -->
+
+    <!-- employee Header Section Start -->
+    <div class="container d-flex flex-grow-1 flex-column sectionBorder justify-content-sm-center"  style="background-color: transparent">
+        <!-- employyee Details Section Start -->
+        <div class="row justify-content-around " style="height: max-content">
+            <!-- employee Details Search Section Start -->
+            <div id="cart" class="col-10 col-md-6 col-lg-5 p-0 mt-3 rounded-3 sectionBorder justify-content-md-center">
+                <!--            <div class="col-10 col-md-5 col-lg-5 p-0 mt-2 rounded-3 sectionBorder" style="background-color: white">-->
+
+                <form action="employee" id="employeeform">
+
+                    <div class="row mt-1">
+                        <div class="mb-3 ms-3 me-1 mt-3 col-10 col-md-5 col-lg-5 ">
+                            <label class="fw-bold" for="txtEmployeeName">Employee Name :</label>
+                            <input class="form-control" id="txtEmployeeName" type="text">
+                            <span class="control-error"></span>
+                        </div>
+                        <div class="mb-3 ms-3 me-1 mt-5 col-10 col-md-5 col-lg-5 ">
+<!--                            <label class="fw-bold" for="txtCusName" >Branch Name :</label>-->
+                            <input class="form-control" id="branchName" placeholder="Branch Name" type="text">
+                            <span class="control-error"></span>
+                        </div>
+
+                    </div>
+                    <div class="row mt-1">
+                        <form>
+                            <div class="form-group mb-3 ms-3 me-1 mt-3 col-10 col-md-5 col-lg-5">
+                                <input type="file" class="form-control-file" placeholder="choose profilePic" id="file">
+                            </div>
+                        </form>
+                    </div>
+                    <div class="row mt-1">
+                        <div class="mb-3 ms-3 me-1 mt-3 col-10 col-md-5 col-lg-5 ">
+                            <label class="fw-bold" for="level">Civil Status :</label>
+                            <select aria-label="Default select example" class="form-select border-dark" id="status">
+                                <option value="MARIDE">MARIDE</option>
+                                <option value="SINGLE">SINGLE</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row mt-0">
+                        <div class="mb-3 ms-3 me-1 mt-3 col-10 col-md-5 col-lg-5 ">
+                            <label class="fw-bold" for="contact">Designation  :</label>
+                            <input class="form-control" id="designation" type="text">
+                            <span class="control-error"></span>
+                        </div>
+                    </div>
+                    <div class="row mt-1">
+                        <div class="mb-3 ms-3 me-1 mt-3 col-10 col-md-5 col-lg-5 ">
+                            <label class="fw-bold" for="level">Civil Status :</label>
+                            <select aria-label="Default select example" class="form-select border-dark" id="emrole">
+                                <option value="ADMIN">ADMIN</option>
+                                <option value="USER">USER</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="row mt-1">
+                        <div class="mb-3 ms-3 me-1 mt-3 col-5 col-md-5 col-lg-5 ">
+                            <label class="fw-bold" for="JoinDate">Join Date :</label>
+                            <input class="form-control" id="EJoinDate" type="date">
+                            <span class="control-error"></span>
+                        </div>
+
+                        <!--                        <div class="mb-3 ms-3 me-1 mt-3 col-10 col-md-5 col-lg-5 ">-->
+                        <!--                            <label class="fw-bold" for="level">Level :</label>-->
+                        <!--                            <select aria-label="Default select example" class="form-select border-dark" id="point">-->
+                        <!--                            </select>-->
+                        <!--                        </div>-->
+                    </div>
+
+                    <div class="row mt-1">
+                        <div class="mb-3 ms-3 me-1 mt-1 col-10 col-md-5 col-lg-5 ">
+                            <label class="fw-bold" for="dob">Date Of Birth :</label>
+                            <input class="form-control" id="Edob" type="date">
+                            <span class="control-error"></span>
+                        </div>
+
+                    </div>
+                    <div class="row mt-1">
+                        <div class="mb-3 ms-1 me-3 mt-3 col-10 col-md-5 col-lg-6 ">
+                            <div class="form-check">
+                                <input value="MALE" class="form-check-input" type="radio" name="flexRadioDefaultEmployee" id="flexRadioDefault3">
+                                <label class="form-check-label" for="flexRadioDefault1">
+                                    MALE
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input value="FEMALE" class="form-check-input" type="radio" name="flexRadioDefaultEmployee" id="flexRadioDefault4" checked>
+                                <label class="form-check-label" for="flexRadioDefault2">
+                                    FEMALE
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mb-3 ms-3 me-3 mt-3 ">
+                        <label class="fw-bold" for="address">Address :</label>
+                        <input class="form-control" id="Eaddress" type="text">
+                        <span class="control-error"></span>
+                    </div>
+
+                    <div class="mb-3 ms-3 me-3 mt-3 ">
+                        <label class="fw-bold" for="email">Email :</label>
+                        <input class="form-control" id="Eemail" type="text">
+                        <span class="control-error"></span>
+                    </div>
+
+                    <div class="row mt-0">
+                        <div class="mb-3 ms-3 me-1 mt-3 col-10 col-md-5 col-lg-5 ">
+                            <label class="fw-bold" for="contact">contact  :</label>
+                            <input class="form-control" id="Econtact" type="text">
+                            <span class="control-error"></span>
+                        </div>
+                    </div>
+
+                    <div class="row mt-0">
+                        <div class="mb-3 ms-3 me-1 mt-3 col-10 col-md-5 col-lg-5 ">
+                            <label class="fw-bold" for="contact">Emergency Contact  :</label>
+                            <input class="form-control" id="EMcontact" type="text">
+                            <span class="control-error"></span>
+                        </div>
+                    </div>
+
+                    <div class="mb-3 ms-3 me-3 mt-3 ">
+                        <label class="fw-bold" for="email">Name the guardian  :</label>
+                        <input class="form-control" id="gurdian" type="text">
+                        <span class="control-error"></span>
+                    </div>
+
+                </form>
+
+
+            </div>
+            <!-- Customer Details Search Section Start -->
+            <!--            <div class="col-10 col-md-6 col-lg-5 p-0 mt-5 rounded-3 sectionBorder"-->
+            <div id="serch" class="col-10 col-md-5 col-lg-5 p-0 mt-5 rounded-3 sectionBorder "
+                 style="height: max-content ">
+                <h4 class="text-center p-2 text-light rounded-3" style="background: #16A085">Manage Customer</h4>
+
+                <div class="mb-3 ms-3 me-3 mt-3 ">
+                    <label class="fw-bold" for="searchCusId">Search Customer :</label>
+                    <input class="form-control me-2 mt-2" id="searchEmployeeID" placeholder="Input Name/NIC/Tp Here"
+                           type="search">
+                </div>
+                <div class="m-4">
+                    <button class="btn btn-success mt-2 m-2" id="btnsaveEmployee" type="button">+ New Customer
+                    </button>
+
+                    <button class="btn btn-warning mt-2 m-2" id="btnUpdateEmployee" type="button">Update Customer
+                    </button>
+
+                    <button class="btn btn-danger mt-2 m-2" id="btnDeleteEmployee" type="button">Delete Customer
+                    </button>
+
+                </div>
+            </div>
+            <!-- Customer Details Search Section End -->
+
+            <!-- Customer Details Search Section End -->
+
+        </div>
+        <!-- Customer Details Section End -->
+
+        <!-- View Customer Details Table Start -->
+        <div class="row mt-1 mt-md-2 mt-lg-4 justify-content-center" style="height: 600px;">
+            <div class="col-11 justify-content-around sectionBorder" style="height: 290px; ">
+                <div class="customerTableDiv overflow-auto" style="height: 270px;">
+                    <table class="table table-success table-striped table-bordered table-hover " id="myemployeetable">
+                        <thead class="text-light table-dark text-center  table-bordered sticky-top">
+                        <tr id="set">
+                            <th>ID</th>
+                            <th>Name</th>
+                            <th>Gender</th>
+                            <th>Designation</th>
+                            <th>Join date</th>
+                            <th>Status</th>
+                            <th>Role</th>
+                            <th>Dob</th>
+                            <th>Address</th>
+                            <th>Contact</th>
+                            <th>Emergency Contact</th>
+                            <th>Guardian Name</th>
+                            <th>Email</th>
+                            <th>Branch</th>
+                            <th>Profile</th>
+                        </tr>
+                        </thead>
+                        <tbody id="employeetbl"></tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <!-- View Customer Details Table End -->
+    </div>
+</main>
+<!///////////end employee//////////////////>
 <script type="module" src="assets/js/dashbord.js"></script>
 <script src="assets/lib/jquery.min.js"></script>
 <script src="assets/lib/bootstrap/js/bootstrap.min.js"></script>
@@ -438,6 +650,7 @@
 
 
 <script type="module" src="controller/CustomerController.js"></script>
+<script type="module" src="controller/EmployeeController.js"></script>
 
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
@@ -447,6 +660,8 @@
     $('#login').css('display','none');
     $('.navbar').css('display','none');
     $('#customer-section').css('display','none');
+    $('#employee-section').css('display','none');
+
     // $('#register_section').css('display','none');
 
     $('#txtCusName').on('click',()=>{
@@ -495,6 +710,7 @@
         $(document.body).css('background-image', 'url(assets/image/Wild.png)');
         // $(document.body).css('background-color', '#8F0094');
         $('#customer-section').css('display','block');
+        $('#employee-section').css('display','none');
 
         $(document).ready(function() {
             // Function to perform the task when scrolling
@@ -519,11 +735,57 @@
                 performTaskOnScroll();
             });
 
+            //employe-----------section
+
+
             // Optionally, you can also call the function once when the page loads
             performTaskOnScroll();
         });
 
-    })
+    });
+
+    $('#employeebtn').on('click',()=>{
+        $('#register_section').css('display','none');
+        $('.navbar').css('display','block');
+        $('#login').css('display','none');
+       $(document.body).css('background-image', 'url(assets/image/Wild.png)');
+        // $(document.body).css('background-color', '#8F0094');
+        $('#employee-section').css('display','block');
+        $('#customer-section').css('display','none');
+
+        $(document).ready(function() {
+            // Function to perform the task when scrolling
+            function performTaskOnScroll() {
+                // $('#register_section').css('display', 'none');
+                $('.navbar').css('display', 'none');
+                // $('#login').css('display', 'none');
+                // $(document.body).css('background-image', 'url(assets/image/Wild.png)');
+                // // $(document.body).css('background-color', '#8F0094');
+                // $('#customer-section').css('display', 'block');
+                clearTimeout(scrollTimeout);
+                // Set a new timeout to show the navigation bar after 1 second (adjust as needed)
+                scrollTimeout = setTimeout(function() {
+                    $('.navbar').fadeIn();
+                }, 1500); // Adjust the delay time as needed
+            }
+            var scrollTimeout;
+
+            // Event listener for scroll
+            $(window).scroll(function() {
+                // Call the function when the user scrolls
+                performTaskOnScroll();
+            });
+
+            //employe-----------section
+
+
+            // Optionally, you can also call the function once when the page loads
+            performTaskOnScroll();
+        });
+
+    });
+
+
 
 
 </script>

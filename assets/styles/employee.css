@@ -1,0 +1,41 @@
+#employee-section{
+    position: relative;
+    top: 5vh;
+}
+#txtEmployeeName,#Eaddress,#Eemail,#Econtact,#EMcontact,#gurdian,#status,#designation{
+    border-bottom-color: red;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    background-color: black;
+    color: red;
+}
+#emrole,#EJoinDate,#Edob{
+    background-color: antiquewhite;
+    border-bottom-color: red;
+    color: red;
+
+}
+#branchName{
+    border-bottom-color:red;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    background-color: transparent;
+    color: red;
+}
+#cart,#serch{
+    background-color: black;
+    opacity:70%;
+    color: white;
+}
+#serch:hover{
+    background-color: black;
+    opacity:100%;
+    color: white;
+}
+#cart:hover{
+    background-color: black;
+    opacity:100%;
+    color: white;
+}
