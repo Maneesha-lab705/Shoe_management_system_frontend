@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="assets/styles/dashbord.css">
     <link rel="stylesheet" href="assets/styles/employee.css">
     <link rel="stylesheet" href="assets/styles/supplier.css">
+    <link rel="stylesheet" href="assets/styles/item.css">
     <link rel="stylesheet" href="assets/styles/imageBox.css">
     <link rel="stylesheet" href="assets/styles/stylesForCustomer.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css">
@@ -861,7 +862,7 @@
     <!-- Item Header End -->
 
     <!-- Item Header Section Start -->
-    <div class="container d-flex flex-grow-1 flex-column sectionBorder" style="background-color: #dfe4ea">
+    <div class="container d-flex flex-grow-1 flex-column sectionBorder" style="background-color: transparent">
 <!--        <div class="position-relative d-inline-block mt-3 mt-lg-4 mt-md-4">-->
 <!--            <h6 id="H7-item">Home > Item</h6>-->
 <!--            <hr>-->
@@ -872,7 +873,7 @@
         <div class="row justify-content-around " style="height: max-content">
 
             <!-- Item Details Search Section Start -->
-            <div class="col-10 col-md-6 col-lg-5 p-0 mt-3 rounded-3 sectionBorder" style="background-color: white">
+            <div class="col-10 col-md-6 col-lg-5 p-0 mt-3 rounded-3 sectionBorder" id="selectSection" >
 
                 <form action="item" id="itemForm">
 
@@ -914,8 +915,8 @@
                     </div>
                 </form>
             </div>
-            <div class="col-10 col-md-5 col-lg-5 p-0 mt-5 rounded-3 sectionBorder"
-                 style="background-color: white;height: max-content ">
+            <div class="col-10 col-md-5 col-lg-5 p-0 mt-5 rounded-3 sectionBorder "
+                 style="height: max-content " id="serchItem">
                 <h4 class="text-center p-2 text-light rounded-3" style="background: #16A085">Manage Item</h4>
 
                 <div class="mb-3 ms-3 me-3 mt-3 ">
@@ -976,6 +977,7 @@
 <script type="module" src="controller/CustomerController.js"></script>
 <script type="module" src="controller/EmployeeController.js"></script>
 <script type="module" src="controller/SupplierController.js"></script>
+<script type="module" src="controller/Item.js"></script>
 
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>

@@ -1,0 +1,22 @@
+#itemSection{
+    color: red;
+    background-color: transparent;
+}
+#selectSection{
+    background-color: #2D422C;
+}
+#itemDescription,#itemGender,#occasion,#verities{
+    border-bottom-color: red;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    background-color: transparent;
+    color: red;
+    background-color: #161719;
+}
+#serchItem{
+    background-color: #2D422C;
+}
+#serchItem:hover{
+    background-color: black;
+}
