@@ -197,6 +197,7 @@ $(document).ready(function (){
 
                 );
                 fetchCustomerData();
+                cleanData();
             },
             error: function (xhr, exception) {
                 Swal.fire(
@@ -284,3 +285,5 @@ function cleanData(){
     point.value="";
     level.value="";
 }
+///////////////////////////////
+

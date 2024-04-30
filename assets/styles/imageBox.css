@@ -1,0 +1,186 @@
+
+header{
+    position: relative;
+}
+.label{
+    position: absolute;
+    width: fit-content;
+    top: 7vh;
+    left: 0;
+    right: 0;
+    margin: auto;
+    display: none;
+    color: white;
+}
+main{
+    position: absolute;
+    top: 14vh;
+}
+.minimize{
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    cursor: pointer;
+}
+
+main>h1{
+    position: absolute;
+    /*top: 10px;*/
+    top: 5vh;
+    left: 40vw;
+    font-size: 40px;
+    width: fit-content;
+}
+
+.assignment{
+    position: relative;
+    margin: 0;
+    top: 20vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+
+}
+.cart{
+    position: relative;
+    width: 300px;
+    height: 300px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 50px;
+    /*background-color: #161719;*/
+}
+.image{
+    width: 300px;
+    height: 180px;
+    border-radius: 20px;
+}
+
+
+
+.assignment_img {
+    width: 140px;
+    height: 120px;
+}
+.text{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 210px;
+    margin: auto;
+    width: fit-content;
+    font-weight: bold;
+    font-size: 25px;
+    color: #20c997;
+}
+.rs{
+    position: relative;
+    top: 10vh;
+}
+.button{
+    position: absolute;
+    top: 250px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: fit-content;
+    border-radius: 20px;
+
+}
+.button button{
+    width: 150px;
+    height: 30px;
+    /*border-radius: 10%;*/
+    background:  #229091;
+    font-size: 25px;
+    border-radius: 20px;
+}
+.button button:hover{
+    background-image: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet, red);
+    animation:slidebg 2s linear infinite;
+}
+
+@keyframes slidebg {
+    to {
+        background-position:20vw;
+    }
+}
+
+button {
+    font-family: system-ui, sans-serif;
+    font-size: 3.5rem;
+    cursor: pointer;
+    padding: .1em .6em;
+    font-weight: bold;
+    border: none;
+}
+/*.assignment_img img:hover{*/
+/*    clip-path: circle(0.0% at 50% 50%);*/
+/*}*/
+
+.assignment_img:hover figcaption{
+    --_i: 0%;
+}
+.assignment_img:hover img {
+    transform: scale(1.2);
+}
+/*/////////////////////*/
+.dark_mood{
+    position: absolute;
+    top: 2vh;
+    left: 80vw ;
+    width: 200px;
+    height: 70px;
+    background: #333;
+    /*border: 2px solid white;*/
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    border-radius: 20px;
+}
+
+.mood{
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    top: 2vh;
+    left: 2vw;
+}
+.dark{
+    display: none;
+    animation: transwer 1s none;
+
+}
+.light{
+    left: 9vw;
+    animation: lightR 1s none;
+
+}
+@keyframes lightR {
+    from{
+        top: 2vh;
+        left: 2vw;
+        opacity: 1%;
+    }
+    to{
+        left: 9vw;
+        opacity: 100%;
+    }
+}
+@keyframes transwer {
+    from{
+        top: 2vh;
+        left: 10vw;
+        opacity: 1%;
+    }
+    to{
+        top: 2vh;
+        left: 2vw;
+        opacity: 100%;
+    }
+
+
+}
+
+
+

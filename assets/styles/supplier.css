@@ -1,0 +1,36 @@
+
+#supplier-section{
+    position: relative;
+    top: 10vh;
+    left: 20px;
+    color: red;
+}
+#tableSupplier{
+position: absolute;
+    top: 5vh;
+    width: 40vw;
+    left: 50vw;
+}
+#inputAddress,#inputAddress2,#inputAddress3,#inputCity,#inputEmail,#inputState,#nameSupplier,#inputcontact1,#inputcontact2,#inputZip,#inputCategory{
+    border-left: 0;
+    border-right: 0;
+    border-top: 0;
+    border-bottom-color: red;
+    background-color:transparent;
+    color: white;
+}
+#suplierForm{
+    border-radius: 50px;
+    position: absolute;
+    top: 6vh;
+    left: 5vw;
+}
+#inputState>option{
+    color: red;
+    background-color: #161719;
+}
+#inputCategory>option{
+    color: red;
+    background-color: #161719;
+}
+

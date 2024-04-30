@@ -14,8 +14,9 @@
     <link rel="stylesheet" href="assets/lib/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/styles/registerForm.css">
     <link rel="stylesheet" href="assets/styles/dashbord.css">
-    <link rel="stylesheet" href="assets/styles/customer.css">
     <link rel="stylesheet" href="assets/styles/employee.css">
+    <link rel="stylesheet" href="assets/styles/supplier.css">
+    <link rel="stylesheet" href="assets/styles/imageBox.css">
     <link rel="stylesheet" href="assets/styles/stylesForCustomer.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css">
 
@@ -24,9 +25,9 @@
 
 <!-- -&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;nav bar section&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;-->
 <!-- Navbar  -->
-<nav class="navbar fixed-top navbar-expand-lg navbar-dark p-md-3">
-    <div class="container">
-        <a class="navbar-brand" href="#">Web Zone</a>
+<nav class="navbar fixed-top position-absolute navbar-expand-lg navbar-dark p-md-3 "id="barBorder">
+    <div class="container" id="navBar">
+        <a class="navbar-brand" id="shoeName" href="#">HELLO SHOE SHOP</a>
         <button
                 class="navbar-toggler"
                 type="button"
@@ -40,7 +41,14 @@
         </button>
 
         <div class="collapse navbar-collapse" id="navbarNav">
-            <div class="mx-auto"></div>
+            <div class="mx-auto">
+                <div class="search">
+                    <label>
+                        <input type="text" placeholder="Search here">
+                        <ion-icon name="search-outline"></ion-icon>
+                    </label>
+                </div>
+            </div>
             <ul class="navbar-nav">
                 <li class="nav-item">
                     <a class="nav-link text-white" id="home" href="#">Home</a>
@@ -52,15 +60,187 @@
                     <a class="nav-link text-white" id="employeebtn" href="#">Employee</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-white" href="#">Suppliyer</a>
+                    <a class="nav-link text-white" id="supplier" href="#">Supplier</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-white" href="#">Inventory</a>
+                    <a class="nav-link text-white" id="inventory" href="#">Inventory</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" id="item" href="#">Item</a>
                 </li>
             </ul>
         </div>
     </div>
 </nav>
+<!--------------------------dashbord--------------------->
+<!-- ========================= Main ==================== -->
+<section class=" dashbord">
+<div class="main">
+    <div class="topbar">
+        <div class="toggle">
+            <ion-icon name="menu-outline"></ion-icon>
+        </div>
+
+        <div class="user">
+            <img src="assets/imgs/customer01.jpg" alt="">
+        </div>
+    </div>
+
+    <!-- ======================= Cards ================== -->
+    <div class="cardBox">
+        <div class="card">
+            <div>
+                <div class="numbers">1,504</div>
+                <div class="cardName">Daily Views</div>
+            </div>
+
+            <div class="iconBx">
+                <ion-icon name="eye-outline"></ion-icon>
+            </div>
+        </div>
+
+        <div class="card">
+            <div>
+                <div class="numbers">80</div>
+                <div class="cardName">Sales</div>
+            </div>
+
+            <div class="iconBx">
+                <ion-icon name="cart-outline"></ion-icon>
+            </div>
+        </div>
+
+        <div class="card">
+            <div>
+                <div class="numbers">284</div>
+                <div class="cardName">Comments</div>
+            </div>
+
+            <div class="iconBx">
+                <ion-icon name="chatbubbles-outline"></ion-icon>
+            </div>
+        </div>
+
+        <div class="card">
+            <div>
+                <div class="numbers">$7,842</div>
+                <div class="cardName">Earning</div>
+            </div>
+
+            <div class="iconBx">
+                <ion-icon name="cash-outline"></ion-icon>
+            </div>
+        </div>
+    </div>
+<!--    <main class="row mt-5 row-cols-lg-10 row-cols-10 row-cols-md-10 row-gap-md-5 flex-lg-row-reverse">-->
+        <div class="assignment">
+            <div class="cart cart1">
+                <div class="assignment_img">
+                    <img class="image" src="assets/image/shoe.jpg" alt="speed" width="300">
+                </div>
+                <div>
+                    <div class="text"  data-aos="flip-down"> Industrial men shoe</div>
+                    <div class="text rs"  data-aos="flip-down"> RS:10000</div>
+                    <div class="button">
+                        <a href="https://github.com/Maneesha-lab705/MyPortfolio"><button>See More</button></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cart cart2">
+                <div class="assignment_img">
+                    <img class="image" src="assets/image/Wild.png" alt="speed" width="300">
+                </div>
+                <div>
+                    <div class="text"  data-aos="flip-down" >Assignment 02</div>
+                    <div class="text rs"  data-aos="flip-down"> RS:10000</div>
+                    <div class="button">
+                        <a href="assets/image/dash.jpg"><button>See More</button></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cart cart3">
+                <div class="assignment_img">
+                    <img  class="image" src="assets/image/nike.jpeg" alt="speed" width="300">
+                </div>
+                <div>
+                    <div class="text" data-aos="flip-down">Assignment 03</div>
+                    <div class="text rs"  data-aos="flip-down"> RS:10000</div>
+                    <div class="button">
+                        <a href="assert/assignmentHTML/assignment03.html"><button>See More</button></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cart cart4">
+                <div class="assignment_img">
+                    <img class="image" src="assets/image/ss.jpeg" alt="speed" width="300">
+                </div>
+                <div>
+                    <div class="text"  data-aos="flip-down">Assignment 04</div>
+                    <div class="text rs"  data-aos="flip-down"> RS:10000</div>
+                    <div class="button">
+                        <a href="assert/assignmentHTML/assignment04.html"><button>See More</button></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cart cart5">
+                <div class="assignment_img">
+                    <img  class="image" src="assets/image/aa.png" alt="speed" width="300">
+                </div>
+                <div>
+                    <div class="text"  data-aos="flip-down">Assignment 05</div>
+                    <div class="text rs"  data-aos="flip-down"> RS:10000</div>
+                    <div class="button">
+                        <button>see more</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cart cart6">
+                <div class="assignment_img">
+                    <img  class="image" src="assets/image/wumen3.jpeg" alt="speed" width="300">
+                </div>
+                <div>
+                    <div class="text"  data-aos="flip-down">Assignment 06</div>
+                    <div class="text rs"  data-aos="flip-down"> RS:10000</div>
+                    <div class="button">
+                        <a href="https://github.com/Maneesha-lab705/Assignment-06"><button>See More</button></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cart cart6">
+                <div class="assignment_img">
+                    <img  class="image" src="assets/image/wumen2.jpeg" alt="speed" width="300">
+                </div>
+                <div>
+                    <div class="text"  data-aos="flip-down">Assignment 07</div>
+                    <div class="text rs"  data-aos="flip-down"> RS:10000</div>
+                    <div class="button">
+                        <a href="assert/cases/assignment07/index.html"><button>See More</button></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cart cart6">
+                <div class="assignment_img">
+                    <img class="image" src="assets/image/wumen1.jpeg" alt="speed" width="300">
+                </div>
+                <div>
+                    <div class="text"  data-aos="flip-down">Assignment 08</div>
+                    <div class="text rs"  data-aos="flip-down"> RS:10000</div>
+                    <div class="button">
+                        <a href="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.nike.com%2Fu%2Fcustom-nike-air-force-1-low-by-you-10001371&psig=AOvVaw2pGzNYUdn4ZZM-0pgYL46X&ust=1714558259785000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCKDs17XZ6YUDFQAAAAAdAAAAABAE"><button>See More</button></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+<!--    </main>-->
+</div>
+</section>
 <!---------------------register form section-------->
 <section class="vh-100 fixed-bottom" id="register_section">
     <div class="container h-50">
@@ -163,107 +343,8 @@
             </div>
         </div>
     </section>
-<!--------------------------dashbord--------------------->
-<section>
 
-</section>
 <!----------------cuatomer section----------------->
-<!--<div id="customer-section" class="container">-->
-<!--    <div class="row">-->
-<!--        <div class="col">-->
-<!--            <h1 class="title">Customers Details</h1>-->
-<!--        </div>-->
-<!--    </div>-->
-<!--    <div class="row">-->
-<!--        <div class="col col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12 data">-->
-<!--            <form>-->
-<!--                &lt;!&ndash;                <div class="mb-3">&ndash;&gt;-->
-<!--                &lt;!&ndash;                    <input class="form-control-input input" id="customer_id" type="text" placeholder="enter id" required>&ndash;&gt;-->
-<!--                &lt;!&ndash;&lt;!&ndash;                    <label for="customer_id" class="form-label">Customer_Id</label>&ndash;&gt;&ndash;&gt;-->
-<!--                &lt;!&ndash;                </div>&ndash;&gt;-->
-<!--                <div class="mb-3">-->
-<!--                    <input id="name" class="form-control-input input" type="text" placeholder="enter name" required>-->
-<!--                    &lt;!&ndash;                    <label class="form-label" for="name">Name</label>&ndash;&gt;-->
-<!--                </div>-->
-
-<!--                <div class="mb-3">-->
-<!--                    <input id="date" class="form-control-input input" type="date" placeholder="enter join date" required>-->
-<!--                    &lt;!&ndash;                    <label class="form-label" for="email">E-mail</label>&ndash;&gt;-->
-<!--                </div>-->
-<!--                <div class="mb-3">-->
-<!--                    <input id="levels" class="form-control-input input" type="number" placeholder="enter level" required>-->
-<!--                    &lt;!&ndash;                    <label class="form-label" for="phone">Contact Number</label>&ndash;&gt;-->
-<!--                </div>-->
-<!--                <select name="Level" id="level" >Level</select>-->
-
-
-<!--            </form>-->
-<!--            <form id="nextform">-->
-<!--                &lt;!&ndash;                <div class="mb-3">&ndash;&gt;-->
-<!--                &lt;!&ndash;                    <input class="form-control-input input" id="customer_id" type="text" placeholder="enter id" required>&ndash;&gt;-->
-<!--                &lt;!&ndash;&lt;!&ndash;                    <label for="customer_id" class="form-label">Customer_Id</label>&ndash;&gt;&ndash;&gt;-->
-<!--                &lt;!&ndash;                </div>&ndash;&gt;-->
-<!--                <div class="mb-3">-->
-<!--                    <input id="point" class="form-control-input input" type="number" placeholder="enter Total points" required>-->
-<!--                    &lt;!&ndash;                    <label class="form-label" for="name">Name</label>&ndash;&gt;-->
-<!--                </div>-->
-<!--                <div class="mb-3">-->
-<!--                    <input id="dob" class="form-control-input input" type="date" placeholder="enter Dob" required>-->
-<!--                    &lt;!&ndash;                    <label class="form-label" for="address">Address</label>&ndash;&gt;-->
-<!--                </div>-->
-<!--                <div class="mb-3">-->
-<!--                    <input id="address" class="form-control-input input" type="email" placeholder="enter  building no or-->
-<!--name" required>-->
-<!--                    &lt;!&ndash;                    <label class="form-label" for="email">E-mail</label>&ndash;&gt;-->
-<!--                </div>-->
-<!--                <div class="mb-3">-->
-<!--                    <input id="lane" class="form-control-input input" type="number" placeholder="enter  lane" required>-->
-<!--                    &lt;!&ndash;                    <label class="form-label" for="phone">Contact Number</label>&ndash;&gt;-->
-<!--                </div>-->
-<!--                <div class="mb-3">-->
-<!--                    <input id="city" class="form-control-input input" type="number" placeholder="enter  city" required>-->
-<!--                    &lt;!&ndash;                    <label class="form-label" for="phone">Contact Number</label>&ndash;&gt;-->
-<!--                </div>-->
-<!--                <div class="mb-3">-->
-<!--                    <input id="state" class="form-control-input input" type="number" placeholder="enter  state" required>-->
-<!--                    &lt;!&ndash;                    <label class="form-label" for="phone">Contact Number</label>&ndash;&gt;-->
-<!--                </div>-->
-<!--                <div class="mb-3">-->
-<!--                    <input id="code" class="form-control-input input" type="number" placeholder="enter  code" required>-->
-<!--                    &lt;!&ndash;                    <label class="form-label" for="phone">Contact Number</label>&ndash;&gt;-->
-<!--                </div>-->
-<!--                <div class="mb-3">-->
-<!--                    <input id="male" class="form-control-input input radio" type="radio" placeholder="enter gender" required>-->
-<!--                    <label class="form-label clabel" for="male">male</label>-->
-<!--                    <input id="female" class="form-control-input input radio" type="radio" placeholder="enter gender" required>-->
-<!--                    <label class="form-label clabel" for="female">female</label>-->
-<!--                </div>-->
-<!--                <div class="mt-4 mb-5" id="customer-batons">-->
-<!--                    <button type="button" class="btn btn-success">Save</button>-->
-<!--                    <button type="button" class="btn btn-primary">Update</button>-->
-<!--                    <button type="button" class="btn btn-danger">Delete</button>-->
-<!--                    <button type="reset" class="btn btn-warning">Clear</button>-->
-<!--                </div>-->
-<!--            </form>-->
-<!--        </div>-->
-<!--        <div class="col col-xl-6 col-lg-6  col-md-6 col-sm-12 col-12" id="table">-->
-<!--            <input type="text" class="form-control mt-3" id="customer-search" placeholder="Search by First Name">-->
-<!--            <table class="table mt-2" border="5px">-->
-<!--                <thead>-->
-<!--                <tr>-->
-<!--                    <th scope="col">Customer_Id</th>-->
-<!--                    <th scope="col">Name</th>-->
-<!--                    <th scope="col">Address</th>-->
-<!--                    <th scope="col">Email</th>-->
-<!--                    <th scope="col">Contact</th>-->
-<!--                </tr>-->
-<!--                </thead>-->
-<!--                <tbody id="customer-table-body">-->
-<!--                </tbody>-->
-<!--            </table>-->
-<!--        </div>-->
-<!--    </div>-->
-<!--</div>-->
 <!-- Customer Start-->
 <main class="container-fluid" id="customer-section">
     <!-- Customer Header Start -->
@@ -464,8 +545,14 @@
                             <span class="control-error"></span>
                         </div>
                         <div class="mb-3 ms-3 me-1 mt-5 col-10 col-md-5 col-lg-5 ">
-<!--                            <label class="fw-bold" for="txtCusName" >Branch Name :</label>-->
+                            <label class="fw-bold" for="txtCusName" >Branch Name :</label>
                             <input class="form-control" id="branchName" placeholder="Branch Name" type="text">
+                            <span class="control-error"></span>
+
+                        </div>
+                        <div class="col-10 col-md-6 col-lg-5  mb-3 ms-3 me-1 mt-1 col-10 col-md-5 col-lg-5">
+                            <label class="fw-bold" for="txtCusName" >Employee Id :</label>
+                            <input class="form-control" id="employeeId" placeholder="EmployeeId" type="text">
                             <span class="control-error"></span>
                         </div>
 
@@ -584,7 +671,7 @@
             <!--            <div class="col-10 col-md-6 col-lg-5 p-0 mt-5 rounded-3 sectionBorder"-->
             <div id="serch" class="col-10 col-md-5 col-lg-5 p-0 mt-5 rounded-3 sectionBorder "
                  style="height: max-content ">
-                <h4 class="text-center p-2 text-light rounded-3" style="background: #16A085">Manage Customer</h4>
+                <h4 class="text-center p-2 text-light rounded-3" style="background: #16A085">Manage Employee</h4>
 
                 <div class="mb-3 ms-3 me-3 mt-3 ">
                     <label class="fw-bold" for="searchCusId">Search Customer :</label>
@@ -634,7 +721,8 @@
                             <th>Profile</th>
                         </tr>
                         </thead>
-                        <tbody id="employeetbl"></tbody>
+                        <tbody id="employeetbl">
+                        </tbody>
                     </table>
                 </div>
             </div>
@@ -642,7 +730,243 @@
         <!-- View Customer Details Table End -->
     </div>
 </main>
-<!///////////end employee//////////////////>
+<!////Suppliyer///////>
+<section id="supplier-section">
+<form  id="suplierForm">
+    <div class="form-row mt-lg-auto ">
+        <div class="form-group col-md-6" id="nn">
+            <label for="nameSupplier">Name</label>
+            <input type="email" class="form-control" id="nameSupplier" placeholder="Name">
+        </div>
+        <div class="form-group col-md-6">
+            <label for="inputEmail">Email</label>
+            <input type="email" class="form-control" id="inputEmail" placeholder="Email">
+        </div>
+        <div class="form-group col-md-6">
+            <label for="inputcontact1">Contact 01</label>
+            <input type="text" class="form-control" id="inputcontact1" placeholder="Contact01">
+        </div>
+        <div class="form-group col-md-6">
+            <label for="inputcontact2">Contact 02</label>
+            <input type="text" class="form-control" id="inputcontact2" placeholder="Contact02">
+        </div>
+    </div>
+    <div class="form-group col-md-9">
+        <label for="inputAddress">Address</label>
+        <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+    </div>
+    <div class="form-group col-md-9">
+        <label for="inputAddress2">Address 2</label>
+        <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
+    </div>
+    <div class="form-group col-md-9">
+        <label for="inputAddress2">Address 3</label>
+        <input type="text" class="form-control" id="inputAddress3" placeholder="Apartment, studio, or floor">
+    </div>
+
+    <div class="form-row">
+        <div class="form-group col-md-6">
+            <label for="inputCity">City</label>
+            <input type="text" class="form-control" id="inputCity">
+        </div>
+        <div class="form-group col-md-4">
+            <label for="inputState">State</label>
+            <select id="inputState" class="form-control">
+                <option selected>....</option>
+                <option>Central Province</option>
+                <option>Eastern Province</option>
+                <option>North Central Province</option>
+                <option>Northern Province</option>
+                <option>North Western Provincee</option>
+                <option>Sabaragamuwa Province</option>
+                <option>Southern Province</option>
+                <option>Uva Province</option>
+                <option>Western Province</option>
+            </select>
+        </div>
+        <div class="form-group col-md-4">
+            <label for="inputCategory">Category</label>
+            <select id="inputCategory" class="form-control">
+                <option selected>....</option>
+                <option>INTERNATIONAL</option>
+                <option>LOCAL</option>
+            </select>
+        </div>
+        <div class="form-group col-md-2">
+            <label for="inputZip">Zip</label>
+            <input type="text" class="form-control" id="inputZip">
+        </div>
+    </div>
+    <div class="m-0">
+        <button class="btn btn-success mt-2 m-2" id="btnsaveSupplier" type="button">+ New Supplier
+        </button>
+
+        <button class="btn btn-warning mt-2 m-2" id="btnUpdateSupplier" type="button">Update Supplier
+        </button>
+
+        <button class="btn btn-danger mt-2 m-2" id="btnDeleteSupplier" type="button">Delete Supplier
+        </button>
+
+    </div>
+</form>
+
+    <div class="row mt-3 "   id="tableSupplier">
+        <div id="serchSupplier" class="col-10 col-md-5 col-lg-5 p-0 mt-5 col-md-9 rounded-3 sectionBorder "
+             style="height: max-content ">
+            <h4 class="text-center p-2 text-light rounded-3" style="background: #16A085">Manage Supplier</h4>
+
+            <div class="mb-3 ms-3 me-3 mt-3 ">
+                <label class="fw-bold me-1" for="searchCusId">Search Customer :</label>
+                <input class="form-control me-1 mt-0" id="searchSupplierID" placeholder="Input Name/NIC/Tp Here"
+                       type="search">
+            </div>
+        </div>
+        <div class="col-11 justify-content-around sectionBorder" style="height: 290px; ">
+            <div class="customerTableDiv overflow-auto" style="height: 270px;">
+                <table class="table table-success table-striped table-bordered table-hover " id="mysupplier">
+                    <thead class="text-light table-dark text-center  table-bordered sticky-top">
+                    <tr id="sup">
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Category</th>
+                        <th>Main st</th>
+                        <th>Apartment</th>
+                        <th>Apartment or flow</th>
+                        <th>City</th>
+                        <th>State</th>
+                        <th>Zip</th>
+                        <th>contact1</th>
+                        <th>contact2</th>
+                        <th>Email</th>
+
+                    </tr>
+                    </thead>
+                    <tbody id="supplierTbl">
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</section>
+<!---------------------------------item section---------------------->
+<!-- Item Start-->
+<main class="container-fluid" id="itemSection">
+    <!-- Item Header Start -->
+    <div class="container d-flex flex-grow-1 flex-column">
+        <div class="position-relative d-inline-block mt-3 mt-lg-4 mt-md-4">
+            <h2 id="H1-item" style="font-family: 'Arial Rounded MT Bold',serif"><i class="bi bi-people"></i> Item
+            </h2>
+        </div>
+    </div>
+    <!-- Item Header End -->
+
+    <!-- Item Header Section Start -->
+    <div class="container d-flex flex-grow-1 flex-column sectionBorder" style="background-color: #dfe4ea">
+<!--        <div class="position-relative d-inline-block mt-3 mt-lg-4 mt-md-4">-->
+<!--            <h6 id="H7-item">Home > Item</h6>-->
+<!--            <hr>-->
+<!--        </div>-->
+        <!-- Item Header Section End -->
+
+        <!-- Item Details Section Start -->
+        <div class="row justify-content-around " style="height: max-content">
+
+            <!-- Item Details Search Section Start -->
+            <div class="col-10 col-md-6 col-lg-5 p-0 mt-3 rounded-3 sectionBorder" style="background-color: white">
+
+                <form action="item" id="itemForm">
+
+                    <div class="mb-3 ms-3 me-1 mt-3 col-10 col-md-5 col-lg-5 ">
+                        <label class="fw-bold" for="itemDescription">Shoe Description :</label>
+                        <input class="form-control" id="itemDescription" type="text">
+                        <span class="control-error"></span>
+                    </div>
+                    <div class="mb-3 ms-3 me-1 mt-3 col-10 col-md-5 col-lg-5 ">
+                        <label class="fw-bold" for="itemGender">Gender :</label>
+                        <select aria-label="Default select example" class="form-select border-dark" id="itemGender">
+                            <option>Gender</option>
+                            <option value="MAN">MAN</option>
+                            <option value="WOMEN">WOMEN</option>
+                        </select>
+                    </div>
+                    <div class="mb-3 ms-3 me-1 mt-3 col-10 col-md-5 col-lg-5 ">
+                        <label class="fw-bold" for="occasion">Occasion :</label>
+                        <select aria-label="Default select example" class="form-select border-dark" id="occasion">
+                            <option>Occasion</option>
+                            <option value="FORMAL">FORMAL</option>
+                            <option value="CASUAL">CASUAL</option>
+                            <option value="INDUSTRIAL">INDUSTRIAL</option>
+                            <option value="SPORT">SPORT</option>
+                        </select>
+                    </div>
+                    <div class="mb-3 ms-3 me-1 mt-3 col-10 col-md-5 col-lg-5 ">
+                        <label class="fw-bold" for="verities">Verities :</label>
+                        <select aria-label="Default select example" class="form-select border-dark" id="verities">
+                            <option>Verities</option>
+                            <option value="HEEL">HEEL</option>
+                            <option value="FLAT">FLAT</option>
+                            <option value="WEDGES">WEDGES</option>
+                            <option value="FLIP_FLOPS">FLIP_FLOPS</option>
+                            <option value="SANDALS">SANDALS</option>
+                            <option value="SHOES">SHOES</option>
+                            <option value="SLIPPERS">SLIPPERS</option>
+                        </select>
+                    </div>
+                </form>
+            </div>
+            <div class="col-10 col-md-5 col-lg-5 p-0 mt-5 rounded-3 sectionBorder"
+                 style="background-color: white;height: max-content ">
+                <h4 class="text-center p-2 text-light rounded-3" style="background: #16A085">Manage Item</h4>
+
+                <div class="mb-3 ms-3 me-3 mt-3 ">
+                    <label class="fw-bold" for="searchSupplierId">Search Item :</label>
+                    <input class="form-control me-2 mt-2" id="searchItemId" placeholder="Input Name/NIC/Tp Here"
+                           type="search">
+                </div>
+                <div class="m-4">
+                    <button class="btn btn-success mt-2 m-2" id="btnSaveItem" type="button">+ New Item
+                    </button>
+
+                    <button class="btn btn-info mt-2 m-2" id="btnUpdateItem" type="button">Update Item
+                    </button>
+
+                    <button class="btn btn-danger mt-2 m-2" id="btnDeleteItem" type="button">Delete Item
+                    </button>
+
+                    <button class="btn btn-warning mt-2 m-2" id="btnResetItem" type="reset">Clear
+                    </button>
+
+                </div>
+            </div>
+            <!-- Item Details Search Section End -->
+        </div>
+        <!-- Item Details Section End -->
+
+        <!-- View Item Details Table Start -->
+        <div class="row mt-1 mt-md-2 mt-lg-4 justify-content-around" style="height: 320px;">
+            <div class="col-11 justify-content-around sectionBorder" style="height: 290px; background: white">
+                <div class="customerTableDiv overflow-auto" style="height: 270px;">
+                    <table class="table table-success table-striped table-bordered table-hover">
+                        <thead class="text-light table-dark text-center  table-bordered sticky-top">
+                        <tr>
+                            <th>Shoe Code</th>
+                            <th>Description</th>
+                            <th>Gender</th>
+                            <th>Occasion</th>
+                            <th>Verities</th>
+                        </tr>
+                        </thead>
+                        <tbody id="itemTable"></tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <!-- View Item Details Table End -->
+    </div>
+</main>
+<!-- Item End-->
+<!---------------------------------item section end---------------------->
+
 <script type="module" src="assets/js/dashbord.js"></script>
 <script src="assets/lib/jquery.min.js"></script>
 <script src="assets/lib/bootstrap/js/bootstrap.min.js"></script>
@@ -651,6 +975,7 @@
 
 <script type="module" src="controller/CustomerController.js"></script>
 <script type="module" src="controller/EmployeeController.js"></script>
+<script type="module" src="controller/SupplierController.js"></script>
 
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
@@ -658,9 +983,18 @@
 
 
     $('#login').css('display','none');
-    $('.navbar').css('display','none');
+    $('.navbar').css('display','block');
     $('#customer-section').css('display','none');
     $('#employee-section').css('display','none');
+    $('body').css('background-image','none');
+    $('#register_section').css('display','none');
+    $('#supplier-section').css('display','none');
+    $('#itemSection').css('display','none');
+    $(document.body).css('background-color', '#121837');
+    // $(document.body).css('background-image', 'url(assets/image/dash.jpg');
+
+
+
 
     // $('#register_section').css('display','none');
 
@@ -690,6 +1024,7 @@
         $('.navbar').css('display','none');
         $('body').css('background-image','none');
         $('#login').css('display','block');
+        $('.dashbord').css('display','none');
         // $(document.body).css('background-image', 'url(assets/image/Wild.png)');
 
     })
@@ -697,50 +1032,24 @@
         $('#register_section').css('display','none');
         $('.navbar').css('display','block');
         $('#login').css('display','none');
-        // $(document.body).css('background-image', 'url(assets/image/Wild.png)');
-        $(document.body).css('background-color', 'black');
+        $(document.body).css('background-image', 'url(assets/image/dash.jpg)');
+        // $(document.body).css('background-color', 'black');
         $('#dash').css('display','block');
         $('.slide').css('display','block');
+        $('.dashbord').css('display','none');
 
     })
     $('#customer').on('click',()=>{
         $('#register_section').css('display','none');
         $('.navbar').css('display','block');
         $('#login').css('display','none');
-        $(document.body).css('background-image', 'url(assets/image/Wild.png)');
-        // $(document.body).css('background-color', '#8F0094');
+        // $(document.body).css('background-image', 'url(assets/image/Wild.png)');
+        $(document.body).css('background-color', '#121837');
         $('#customer-section').css('display','block');
         $('#employee-section').css('display','none');
+        $('.dashbord').css('display','none');
+        $('#supplier-section').css('display','none');
 
-        $(document).ready(function() {
-            // Function to perform the task when scrolling
-            function performTaskOnScroll() {
-                // $('#register_section').css('display', 'none');
-                $('.navbar').css('display', 'none');
-                // $('#login').css('display', 'none');
-                // $(document.body).css('background-image', 'url(assets/image/Wild.png)');
-                // // $(document.body).css('background-color', '#8F0094');
-                // $('#customer-section').css('display', 'block');
-                clearTimeout(scrollTimeout);
-                // Set a new timeout to show the navigation bar after 1 second (adjust as needed)
-                scrollTimeout = setTimeout(function() {
-                    $('.navbar').fadeIn();
-                }, 1500); // Adjust the delay time as needed
-            }
-            var scrollTimeout;
-
-            // Event listener for scroll
-            $(window).scroll(function() {
-                // Call the function when the user scrolls
-                performTaskOnScroll();
-            });
-
-            //employe-----------section
-
-
-            // Optionally, you can also call the function once when the page loads
-            performTaskOnScroll();
-        });
 
     });
 
@@ -748,42 +1057,79 @@
         $('#register_section').css('display','none');
         $('.navbar').css('display','block');
         $('#login').css('display','none');
-       $(document.body).css('background-image', 'url(assets/image/Wild.png)');
-        // $(document.body).css('background-color', '#8F0094');
+       // $(document.body).css('background-image', 'url(assets/image/Wild.png)');
+        $(document.body).css('background-color', '#121837');
         $('#employee-section').css('display','block');
         $('#customer-section').css('display','none');
+        $('.dashbord').css('display','none');
 
-        $(document).ready(function() {
-            // Function to perform the task when scrolling
-            function performTaskOnScroll() {
-                // $('#register_section').css('display', 'none');
-                $('.navbar').css('display', 'none');
-                // $('#login').css('display', 'none');
-                // $(document.body).css('background-image', 'url(assets/image/Wild.png)');
-                // // $(document.body).css('background-color', '#8F0094');
-                // $('#customer-section').css('display', 'block');
-                clearTimeout(scrollTimeout);
-                // Set a new timeout to show the navigation bar after 1 second (adjust as needed)
-                scrollTimeout = setTimeout(function() {
-                    $('.navbar').fadeIn();
-                }, 1500); // Adjust the delay time as needed
-            }
-            var scrollTimeout;
-
-            // Event listener for scroll
-            $(window).scroll(function() {
-                // Call the function when the user scrolls
-                performTaskOnScroll();
-            });
-
-            //employe-----------section
-
-
-            // Optionally, you can also call the function once when the page loads
-            performTaskOnScroll();
         });
-
+    $('#supplier').on('click',()=> {
+        $('#register_section').css('display', 'none');
+        $('#employee-section').css('display', 'none');
+        $('.navbar').css('display', 'block');
+        $('#login').css('display', 'none');
+        // $(document.body).css('background-image', 'url(assets/image/Wild.png)');
+        $(document.body).css('background-color', '#121837');
+        $('#dash').css('display', 'none');
+        $('.slide').css('display', 'none');
+        $('.dashbord').css('display', 'none');
+        $('#supplier-section').css('display', 'block');
+        $('#itemSection').css('display', 'none');
     });
+    $('#item').on('click',()=> {
+        $('#register_section').css('display', 'none');
+        $('#employee-section').css('display', 'none');
+        $('.navbar').css('display', 'block');
+        $('#login').css('display', 'none');
+        // $(document.body).css('background-image', 'url(assets/image/Wild.png)');
+        $(document.body).css('background-color', '#121837');
+        $('#dash').css('display', 'none');
+        $('.slide').css('display', 'none');
+        $('.dashbord').css('display', 'none');
+        $('#supplier-section').css('display', 'none');
+        $('#itemSection').css('display', 'block');
+        $('#customer-section').css('display','none');
+    });
+        // $(document).ready(function() {
+        //     // Function to perform the task when scrolling
+        //     function performTaskOnScroll() {
+        //         // $('#register_section').css('display', 'none');
+        //         $('.navbar').css('display', 'none');
+        //         // $('#login').css('display', 'none');
+        //         // $(document.body).css('background-image', 'url(assets/image/Wild.png)');
+        //         // // $(document.body).css('background-color', '#8F0094');
+        //         // $('#customer-section').css('display', 'block');
+        //         clearTimeout(scrollTimeout);
+        //         // Set a new timeout to show the navigation bar after 1 second (adjust as needed)
+        //         scrollTimeout = setTimeout(function() {
+        //             $('.navbar').fadeIn();
+        //         }, 1500); // Adjust the delay time as needed
+        //     }
+        //     var scrollTimeout;
+        //
+        //     // Event listener for scroll
+        //     $(window).scroll(function() {
+        //         // Call the function when the user scrolls
+        //         performTaskOnScroll();
+        //     });
+        //
+        //     //employe-----------section
+        //
+        //
+        //     // Optionally, you can also call the function once when the page loads
+        //     performTaskOnScroll();
+        // });
+    $('#home').on('click',()=>{
+        $('.dashbord').css('display','block');
+        $('#register_section').css('display','none');
+        $('.navbar').css('display','block');
+        $('#login').css('display','none');
+        // $(document.body).css('background-color', '#8F0094');
+        $('#employee-section').css('display','none');
+        $('#customer-section').css('display','none');
+        $(document.body).css('background-image','none' );
+    })
 
 
 

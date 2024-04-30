@@ -1,17 +1,4 @@
-/*!*.form-control-input{*!*/
-/*!*    border-radius: 10px;*!*/
-/*!*    outline: 0;*!*/
 
-/*!*}*!*/
-/*body{*/
-/*    overflow-x: hidden;*/
-/*}*/
-/*.form-label{*/
-/*    position: relative;*/
-/*    top: 10vh;*/
-/*    color: black;*/
-
-/*}*/
 
 .radio{
     position: relative;
@@ -28,19 +15,19 @@
     left: 5vw;
 }
 
-.input{
-        top: 0;
-        font-family: inherit;
-        width: 50%;
-        border: 0;
-        border-bottom: 2px solid red;
-        outline: 0;
-        font-size: 1rem;
-        color: red;
-        padding: 7px 0;
-        background: transparent;
-        transition: 0.2s;
-}
+/*.input{*/
+/*        top: 0;*/
+/*        font-family: inherit;*/
+/*        width: 50%;*/
+/*        border: 0;*/
+/*        border-bottom: 2px solid red;*/
+/*        outline: 0;*/
+/*        font-size: 1rem;*/
+/*        color: red;*/
+/*        padding: 7px 0;*/
+/*        background: transparent;*/
+/*        transition: 0.2s;*/
+/*}*/
 /*.form-control-input{*/
 /*    top: 0;*/
 /*    font-family: inherit;*/
@@ -63,3 +50,18 @@
 /*#total-text,.unit{*/
 /*    color: #0dcaf0;*/
 /*}*/
+#txtCusName,#contact,#address,#email{
+    border-top: 0px;
+    border-right: 0;
+    border-left: 0;
+    border-bottom-color: red;
+    /*background-color: #20c997;*/
+}
+#customerTable tr:hover{
+    background-color: red;
+}
+#cusIcon{
+    width: 100px;
+    height: 100px;
+}
+
