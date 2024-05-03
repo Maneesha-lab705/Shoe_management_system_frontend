@@ -1,10 +1,5 @@
-body{
-    background-image: url("../image/v.gif");
-    background-size: cover;
-    background-attachment: fixed;
-    font-family: "Times New Roman";
-    overflow-x: hidden;
-}
+
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400');
 
 #reg-button{
     bottom: 30vh;
@@ -12,12 +7,18 @@ body{
 }
 #cards{
     background: transparent ;
-    border: black solid 1px;
+    border: greenyellow solid 1px;
+}
+#cards:hover{
+    background: #20c997;
+    border: red solid 1px;
+    opacity:70%;
+    color: red;
+
 }
 .h1{
-   color: red;
+   color: black;
 }
-@import url('https://fonts.googleapis.com/css?family=Roboto:300,400');
 
 * {
     margin:0;
@@ -119,6 +120,7 @@ a,a:hover{
     position: relative;
     overflow: hidden;
     box-shadow: 0 0 40px 0 #e1e1e1;
+    color: white;
 }
 .myform-area .form-area .form-input{
     width: 50%;
@@ -207,4 +209,7 @@ a,a:hover{
 }
 .myform-area .form-area .myform-button .myform-btn:hover{
     background: #07315B;
+}
+form-label{
+    color: white;
 }
