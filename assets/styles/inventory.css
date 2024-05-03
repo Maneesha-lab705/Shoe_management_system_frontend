@@ -1,0 +1,22 @@
+#inventorySelectItem,#supplierdetail,#priceDetail,#orderbtn{
+    width: 300px;
+    margin-right: 10px;
+    color: red;
+}
+#invenImage{
+    width: 250px;
+    height: 250px;
+    border-radius: 100% ;
+}
+#order{
+    width: 200px;
+    background-color: red;
+}
+#itemCode,#itemCategory,#desc,#size,#itemPic,#supplierCode,#sName,#sailPrice,#byPrice,#profit,#prMargin,#inventoryQty{
+    border-bottom-color: red;
+    border-top-color: black;
+    border-left-color:black ;
+    border-right-color:black ;
+    background-color: #161719;
+    color: red;
+}

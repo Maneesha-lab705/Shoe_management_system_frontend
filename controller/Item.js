@@ -2,7 +2,7 @@ var itemCode =null;
 $(document).ready(function (){
     $("#btnSaveItem").click(function (){
 
-        let description = $("#itemDescription").val();
+        let description = $("#code").val();
         let itemgender = $("#itemGender").val();
         let occation = $("#occasion").val();
         let veritie = $("#verities").val();

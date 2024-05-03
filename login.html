@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="assets/styles/supplier.css">
     <link rel="stylesheet" href="assets/styles/item.css">
     <link rel="stylesheet" href="assets/styles/imageBox.css">
+    <link rel="stylesheet" href="assets/styles/inventory.css">
     <link rel="stylesheet" href="assets/styles/stylesForCustomer.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css">
 
@@ -850,40 +851,32 @@
     </div>
 </section>
 <!---------------------------------item section---------------------->
-<!-- Item Start-->
+
 <main class="container-fluid" id="itemSection">
     <!-- Item Header Start -->
     <div class="container d-flex flex-grow-1 flex-column">
         <div class="position-relative d-inline-block mt-3 mt-lg-4 mt-md-4">
-            <h2 id="H1-item" style="font-family: 'Arial Rounded MT Bold',serif"><i class="bi bi-people"></i> Item
+            <h2 id="H1-item" style="font-family: 'Arial Rounded MT Bold',serif"><i class="bi bi-people"></i> Place Inventory
             </h2>
         </div>
     </div>
-    <!-- Item Header End -->
 
-    <!-- Item Header Section Start -->
     <div class="container d-flex flex-grow-1 flex-column sectionBorder" style="background-color: transparent">
-<!--        <div class="position-relative d-inline-block mt-3 mt-lg-4 mt-md-4">-->
-<!--            <h6 id="H7-item">Home > Item</h6>-->
-<!--            <hr>-->
-<!--        </div>-->
-        <!-- Item Header Section End -->
 
-        <!-- Item Details Section Start -->
         <div class="row justify-content-around " style="height: max-content">
 
-            <!-- Item Details Search Section Start -->
-            <div class="col-10 col-md-6 col-lg-5 p-0 mt-3 rounded-3 sectionBorder" id="selectSection" >
 
-                <form action="item" id="itemForm">
+            <div class="col-10 col-md-6 col-lg-5 p-0 mt-3 rounded-3 sectionBorder" id="inventorySelect" >
+
+                <form action="item" id="itemform">
 
                     <div class="mb-3 ms-3 me-1 mt-3 col-10 col-md-5 col-lg-5 ">
-                        <label class="fw-bold" for="itemDescription">Shoe Description :</label>
-                        <input class="form-control" id="itemDescription" type="text">
+                        <label class="fw-bold" for="code">Item Brand</label>
+                        <input class="form-control" id="code" type="text">
                         <span class="control-error"></span>
                     </div>
                     <div class="mb-3 ms-3 me-1 mt-3 col-10 col-md-5 col-lg-5 ">
-                        <label class="fw-bold" for="itemGender">Gender :</label>
+                        <label class="fw-bold" for="itemGender">Item gender:</label>
                         <select aria-label="Default select example" class="form-select border-dark" id="itemGender">
                             <option>Gender</option>
                             <option value="MAN">MAN</option>
@@ -894,10 +887,10 @@
                         <label class="fw-bold" for="occasion">Occasion :</label>
                         <select aria-label="Default select example" class="form-select border-dark" id="occasion">
                             <option>Occasion</option>
-                            <option value="FORMAL">FORMAL</option>
-                            <option value="CASUAL">CASUAL</option>
-                            <option value="INDUSTRIAL">INDUSTRIAL</option>
-                            <option value="SPORT">SPORT</option>
+                            <option>FORMAL</option>
+                            <option>CASUAL</option>
+                            <option>INDUSTRIAL</option>
+                            <option>SPORT</option>
                         </select>
                     </div>
                     <div class="mb-3 ms-3 me-1 mt-3 col-10 col-md-5 col-lg-5 ">
@@ -961,6 +954,150 @@
 </main>
 <!-- Item End-->
 <!---------------------------------item section end---------------------->
+<!---------------------------------Place Inventory start---------------------->-->-->
+<main class="container-fluid" id="inventorySection">
+    <!-- Item Header Start -->
+    <div class="container d-flex flex-grow-1 flex-column">
+        <div class="position-relative d-inline-block mt-3 mt-lg-4 mt-md-4">
+            <h2 id="H1-inventory" style="font-family: 'Arial Rounded MT Bold',serif"><i class="bi bi-people"></i> Place Inventory
+            </h2>
+        </div>
+    </div>
+
+    <div class="container d-flex flex-grow-1 flex-column " style="background-color: transparent">
+
+        <div class="row" style="height: fit-content">
+            <div class="col-10 col-md-6 col-lg-10 p-0 mt-3 rounded-3 sectionBorder" id="inventorySelectItem" >
+                <form action="inventory" id="inventoryForm">
+                    <div class="mb-3 ms-3 me-1 mt-3 col-10 col-md-5 col-lg-5 ">
+                        <label class="fw-bold" for="itemCode">Item Code:</label>
+                        <select aria-label="Default select example" class="form-select border-dark" id="itemCode">
+                            <option></option>
+                        </select>
+                    </div>
+                    <div class="mb-3 ms-3 me-1 mt-3 col-10 col-md-5 col-lg-5 ">
+                        <label class="fw-bold" for="category">Category</label>
+                        <input class="form-control" id="category" type="text">
+                        <span class="control-error"></span>
+                    </div>
+                    <div class="mb-3 ms-3 me-1 mt-3 col-10 col-md-5 col-lg-5 ">
+                        <label class="fw-bold" for="size">SIze :</label>
+                        <select aria-label="Default select example" class="form-select border-dark" id="size">
+                            <option>Size</option>
+                            <option>5</option>
+                            <option>6</option>
+                            <option>7</option>
+                            <option>8</option>
+                            <option>9</option>
+                            <option>10</option>
+                            <option>11</option>
+                        </select>
+                    </div>
+                    <div class="mb-3 ms-3 me-1 mt-3 col-10 col-md-5 col-lg-10 ">
+                        <label class="fw-bold" for="desc">Item Description</label>
+                        <input class="form-control" id="desc" type="text">
+                        <span class="control-error"></span>
+                    </div>
+                    <div class="mb-3 ms-3 me-1 mt-3 col-10 col-md-5 col-lg-10 ">
+                        <label class="fw-bold" for="itemPic">Item Pictuer</label>
+                        <input class="form-control" id="itemPic" type="file">
+                        <span class="control-error"></span>
+                    </div>
+
+                </form>
+            </div>
+            <div class="mb-3 ms-3 me-1 mt-3 col-10 col-md-5 col-lg-10 rounded-bottom sectionBorder "
+                  id="supplierdetail">
+                <div class="mb-3 ms-3 me-1 mt-3 col-10 col-md-5 col-lg-10 ">
+                    <label class="fw-bold" for="supplierCode">Supplier code :</label>
+                    <select aria-label="Default select example" class="form-select border-dark" id="supplierCode">
+                        <option></option>
+                    </select>
+                </div>
+                <div class="mb-3 ms-3 me-1 mt-3 col-10 col-md-5 col-lg-10 ">
+                    <label class="fw-bold" for="sName">Supplier name</label>
+                    <input class="form-control" id="sName" type="text">
+                    <span class="control-error"></span>
+                </div>
+
+                <div class="m-4">
+                    <button class="btn btn-success mt-2 " id="btnAddtoCart" type="button">+Add to Cart
+                    </button>
+                </div>
+            </div>
+            <div class="col-6 col-md-1 col-lg-5 p-0 mt-4 me-lg-3 rounded-bottom sectionBorder "
+                 id="priceDetail">
+                <div class="mb-3 ms-3 me-1 mt-1 col-10 col-md-5 col-lg-7 ">
+                    <label class="fw-bold" for="byPrice">Buy Price</label>
+                    <input class="form-control" id="byPrice" type="text">
+                    <span class="control-error"></span>
+                </div>
+
+                <div class="mb-3 ms-3 me-1 mt-1 col-10 col-md-5 col-lg-7 ">
+                    <label class="fw-bold" for="prMargin">Profit margin </label>
+                    <input class="form-control" id="prMargin" type="text">
+                    <span class="control-error"></span>
+                </div>
+                <div class="mb-3 ms-3 me-1 mt-1 col-10 col-md-5 col-lg-7 ">
+                    <label class="fw-bold" for="profit">Expected Profit</label>
+                    <input class="form-control" id="profit" type="text">
+                    <span class="control-error"></span>
+                </div>
+                <div class="mb-3 ms-3 me-1 mt-1 col-10 col-md-5 col-lg-7 ">
+                    <label class="fw-bold" for="sailPrice">Sale Price</label>
+                    <input class="form-control" id="sailPrice" type="text">
+                    <span class="control-error"></span>
+                </div>
+                <div class="mb-3 ms-3 me-1 mt-1 col-10 col-md-5 col-lg-5 ">
+                    <label class="fw-bold" for="inventoryQty">QTY</label>
+                    <input class="form-control" id="inventoryQty" type="text">
+                    <span class="control-error"></span>
+                </div>
+            </div>
+            <div class="col-6 col-md-1 col-lg-5 p-0 mt-4 m-0 rounded-bottom sectionBorder "
+                 id="orderbtn">
+                <div class="m-4">
+                    <button class="btn btn-success mt-2 m-2" id="order" type="button">+Order
+                    </button>
+                </div>
+                <img src="assets/image/wumen2.jpeg" id="invenImage">
+                <label class="fw-bold" for="itemStatus">Item Status</label>
+                <input class="form-control" id="itemStatus" type="text">
+                <span class="control-error"></span>
+            </div>
+        </div>
+        </div>
+
+
+        <div class="row mt-1 mt-md-2 mt-lg-4 justify-content-around" style="height: 320px;">
+            <div class="col-11 justify-content-around sectionBorder" style="height: 290px; background: white">
+                <div class="customerTableDiv overflow-auto" style="height: 270px;">
+                    <table class="table table-success table-striped table-bordered table-hover">
+                        <thead class="text-light table-dark text-center  table-bordered sticky-top">
+                        <tr>
+                            <th>Shoe Code</th>
+                            <th>Description</th>
+                            <th>Shoe size</th>
+                            <th>Categroy</th>
+                            <th>supplier Code</th>
+                            <th>supplier Name</th>
+                            <th>Sale Price</th>
+                            <th>Buy Price</th>
+                            <th>Profit</th>
+                            <th>Profit Margin</th>
+                            <th>Qty</th>
+                            <th>Status</th>
+                            <th>pictuer</th>
+                        </tr>
+                        </thead>
+                        <tbody id="inventoryTable"></tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+<!---------------------------------Place Inventory end---------------------->-->-->
 
 <script type="module" src="assets/js/dashbord.js"></script>
 <script src="assets/lib/jquery.min.js"></script>
@@ -972,13 +1109,14 @@
 <script type="module" src="controller/EmployeeController.js"></script>
 <script type="module" src="controller/SupplierController.js"></script>
 <script type="module" src="controller/Item.js"></script>
+<script type="module" src="controller/inventory.js"></script>
 
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
 <script>
 
 
-    $('#login').css('display','none');
+    $('#login').css('display','block');
     $('.navbar').css('display','block');
     $('#customer-section').css('display','none');
     $('#employee-section').css('display','none');
@@ -986,6 +1124,7 @@
     $('#register_section').css('display','none');
     $('#supplier-section').css('display','none');
     $('#itemSection').css('display','none');
+    $('#inventorySection').css('display','none');
     $(document.body).css('background-color', '#121837');
     // $(document.body).css('background-image', 'url(assets/image/dash.jpg');
 
@@ -1026,13 +1165,14 @@
     })
     $('#log').on('click',()=>{
         $('#register_section').css('display','none');
-        $('.navbar').css('display','block');
+        $('.navbar').css('display','none');
         $('#login').css('display','none');
         $(document.body).css('background-image', 'url(assets/image/dash.jpg)');
         // $(document.body).css('background-color', 'black');
-        $('#dash').css('display','block');
-        $('.slide').css('display','block');
+        $('#dash').css('display','none');
+        $('.slide').css('display','none');
         $('.dashbord').css('display','none');
+        $('#register_section').css('display','block');
 
     })
     $('#customer').on('click',()=>{
@@ -1045,6 +1185,8 @@
         $('#employee-section').css('display','none');
         $('.dashbord').css('display','none');
         $('#supplier-section').css('display','none');
+        $('#inventorySection').css('display','none');
+        $('#itemSection').css('display','none');
 
 
     });
@@ -1058,6 +1200,8 @@
         $('#employee-section').css('display','block');
         $('#customer-section').css('display','none');
         $('.dashbord').css('display','none');
+        $('#itemSection').css('display','none');
+        $('#inventorySection').css('display','none');
 
         });
     $('#supplier').on('click',()=> {
@@ -1072,6 +1216,7 @@
         $('.dashbord').css('display', 'none');
         $('#supplier-section').css('display', 'block');
         $('#itemSection').css('display', 'none');
+        $('#inventorySection').css('display', 'none');
     });
     $('#item').on('click',()=> {
         $('#register_section').css('display', 'none');
@@ -1086,6 +1231,7 @@
         $('#supplier-section').css('display', 'none');
         $('#itemSection').css('display', 'block');
         $('#customer-section').css('display','none');
+        $('#inventorySection').css('display','none');
     });
         // $(document).ready(function() {
         //     // Function to perform the task when scrolling
@@ -1124,10 +1270,23 @@
         // $(document.body).css('background-color', '#8F0094');
         $('#employee-section').css('display','none');
         $('#customer-section').css('display','none');
+        $('#inventorySection').css('display','none');
         $(document.body).css('background-image','none' );
     })
 
-
+    $('#inventory').on('click',()=>{
+        $('.dashbord').css('display','none');
+        $('#register_section').css('display','none');
+        $('.navbar').css('display','block');
+        $('#login').css('display','none');
+        // $(document.body).css('background-color', '#8F0094');
+        $('#employee-section').css('display','none');
+        $('#customer-section').css('display','none');
+        $('#inventorySection').css('display','block');
+        $('#supplier-section').css('display','none');
+        $('#itemSection').css('display','none');
+        $(document.body).css('background-image','none' );
+    })
 
 
 </script>
