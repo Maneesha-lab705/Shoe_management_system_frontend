@@ -244,108 +244,111 @@
 </div>
 </section>
 <!---------------------register form section-------->
-<section class="vh-100 fixed-bottom" id="register_section">
-    <div class="container h-50">
-        <div class="row d-flex justify-content-center align-items-center h-100">
-            <div class="col-lg-12 col-xl-11">
-                <div class="card text-black" id="cards" style="border-radius: 25px;">
-                    <div class="card-body p-md-5">
-                        <div class="row justify-content-center">
-                            <div class="col-md-10 col-lg-6 col-xl-5 order-2 order-lg-1">
+<div class="bg-img" >
+    <div class="content" id="logingForm">
+        <header>Login Form</header>
+        <form action="#">
+            <div class="field">
+                <span class="fa fa-user"></span>
+                <input type="text"id="loginEmail" required placeholder="Email or Phone">
+            </div>
+            <div class="field space">
+                <span class="fa fa-lock"></span>
+                <input type="password" class="password" id="loginPassword" required placeholder="Password">
 
-                                <p class="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4" id="signUp">Sign up</p>
-
-                                <form class="mx-1 mx-md-4">
-
-                                    <div class="d-flex flex-row align-items-center mb-4">
-                                        <i class="fas fa-user fa-lg me-3 fa-fw"></i>
-                                        <div data-mdb-input-init class="form-outline flex-fill mb-0">
-                                            <input type="text" id="form3Example1c" class="form-control" />
-                                            <label class="form-label" style="color: #0d6efd" for="form3Example1c">Your Role</label>
-                                        </div>
-                                    </div>
-
-                                    <div class="d-flex flex-row align-items-center mb-4">
-                                        <i class="fas fa-envelope fa-lg me-3 fa-fw"></i>
-                                        <div data-mdb-input-init class="form-outline flex-fill mb-0">
-                                            <input type="email" id="form3Example3c" class="form-control" />
-                                            <label class="form-label" style="color: #0d6efd" for="form3Example3c">Your Email</label>
-                                        </div>
-                                    </div>
-
-                                    <div class="d-flex flex-row align-items-center mb-4">
-                                        <i class="fas fa-lock fa-lg me-3 fa-fw"></i>
-                                        <div data-mdb-input-init class="form-outline flex-fill mb-0">
-                                            <input type="password" id="form3Example4c" class="form-control" />
-                                            <label class="form-label"style="color: #0d6efd" for="form3Example4c">Password</label>
-                                        </div>
-                                    </div>
-
-                                    <div class="d-flex flex-row align-items-center mb-4">
-                                        <i class="fas fa-key fa-lg me-3 fa-fw"></i>
-                                        <div data-mdb-input-init class="form-outline flex-fill mb-0">
-                                            <input type="password" id="form3Example4cd" class="form-control" />
-                                            <label class="form-label"style="color: #0d6efd" for="form3Example4cd">Repeat your password</label>
-                                        </div>
-                                    </div>
-
-                                    <div class="form-check d-flex justify-content-center mb-5">
-                                        <input class="form-check-input me-2" type="checkbox" value="" id="form2Example3c" />
-                                            I agree all statements in <a href="#!">Terms of service</a>
-                                        </label>
-                                    </div>
-
-                                    <div class="d-flex justify-content-center mx-4 mb-3 mb-lg-4">
-                                        <button type="button" data-mdb-button-init data-mdb-ripple-init class="btn btn-primary btn-lg" id="reg-button">Register</button>
-                                    </div>
-
-                                </form>
-                            </div>
-                        </div>
-                    </div>
+            </div>
+            <div class="pass">
+                <a href="#">Forgot Password?</a>
+            </div>
+            <div class="field">
+                <input type="submit" value="LOGIN" id="userLogingbtn">
+            </div>
+            <div class="login">Or login with</div>
+            <div class="link">
+                <div class="facebook">
+                    <i class="fab fa-facebook-f"><span>Facebook</span></i>
+                </div>
+                <div class="instagram">
+                    <i class="fab fa-instagram"><span>Instagram</span></i>
                 </div>
             </div>
-        </div>
+            <div class="signup">Don't have account?
+                <input type="button" value="SingUp Now" id="userSingUp">
+            </div>
+        </form>
     </div>
-</section>
-
+</div>
 <!-------------------------loging section--------------------->
 
-    <section class="myform-area" id="login">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-lg-8">
-                    <div class="form-area login-form">
-                        <div class="form-content">
-                            <h2>Login</h2>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla non aperiam cum quas quod reprehenderit.</p>
-                            <ul>
-                                <li><a href="#" class="facebook"><i class="fa fa-facebook-f"></i><span>facebook</span></a></li>
-                                <li><a href="#" class="twitter"><i class="fa fa-twitter"></i><span>twitter</span></a></li>
-                            </ul>
-                        </div>
-                        <div class="form-input">
-                            <h2>Login Form</h2>
-                            <form>
-                                <div class="form-group">
-                                    <input type="text"  name="name" required>
-                                    <label>User Name</label>
-                                </div>
-                                <div class="form-group">
-                                    <input type="password"  name="password" required>
-                                    <label>password</label>
-                                </div>
-                                <div class="myform-button">
-                                    <button class="myform-btn" id="log">Login</button>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
+<div class="col-lg-4 col-md-6 ml-auto mr-auto registerform" >
+    <div class="card card-login registerCard">
+        <form class="form" method="" action="">
+            <div class="card-header card-header-primary text-center">
+                <h4 class="card-title">Login</h4>
+                <div class="social-line">
+                    <a href=" ">
+                        <i class="material-icons">facebook</i>
+                    </a>
+                    <a href="#pablo" class="btn btn-just-icon btn-link">
+                        <i class="fa fa-twitter">twiter</i>
+                    </a>
+                    <a href="#pablo" class="btn btn-just-icon btn-link">
+                        <i class="fa fa-google-plus"></i>
+                    </a>
                 </div>
             </div>
-        </div>
-    </section>
-
+            <p class="description text-center">Or Be Classical</p>
+            <div class="card-body">
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                    <span class="input-group-text">
+                      <i class="material-icons">face</i>
+                    </span>
+                        </div>
+                        <input type="text" class="form-control" id="role" placeholder="Job Role">
+                    </div>
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                    <span class="input-group-text">
+                      <i class="material-icons">face</i>
+                    </span>
+                    </div>
+                    <input type="text" class="form-control" id="emId" placeholder="Employee Id">
+                </div>
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                    <span class="input-group-text">
+                      <i class="material-icons">face</i>
+                    </span>
+                    </div>
+                    <input type="text" class="form-control" id="fistName" placeholder="First Name...">
+                </div>
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                    <span class="input-group-text">
+                      <i class="material-icons">mail</i>
+                    </span>
+                    </div>
+                    <input type="email" class="form-control" id="userEmail" placeholder="Email...">
+                </div>
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                    <span class="input-group-text">
+                      <i class="material-icons">lock_outline</i>
+                    </span>
+                    </div>
+                    <input type="password" class="form-control" id="userPassword" placeholder="Password...">
+                </div>
+            </div>
+            <div class="footer text-center">
+                <input type="button" class="btn-success" id="singUp" value="SingUp">
+            </div>
+            <div class="footer text-center mt-5">
+                <input type="button" class="btn-success" id="log" value="Login">
+            </div>
+        </form>
+    </div>
+</div>
 <!----------------cuatomer section----------------->
 <!-- Customer Start-->
 <main class="container-fluid" id="customer-section">
@@ -1110,6 +1113,7 @@
 <script type="module" src="controller/SupplierController.js"></script>
 <script type="module" src="controller/Item.js"></script>
 <script type="module" src="controller/inventory.js"></script>
+<script type="module" src="controller/UserController.js"></script>
 
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
@@ -1117,13 +1121,14 @@
 
 
     $('#login').css('display','block');
-    $('.navbar').css('display','block');
+    $('.card-login').css('display','none');
+    $('.navbar').css('display','none');
     $('#customer-section').css('display','none');
     $('#employee-section').css('display','none');
     $('body').css('background-image','none');
-    $('#register_section').css('display','none');
     $('#supplier-section').css('display','none');
     $('#itemSection').css('display','none');
+    $('.dashbord').css('display','none');
     $('#inventorySection').css('display','none');
     $(document.body).css('background-color', '#121837');
     // $(document.body).css('background-image', 'url(assets/image/dash.jpg');
@@ -1154,27 +1159,41 @@
     //     $(document.body).css('background-image', 'url(assets/image/Wild.png)');
     //
     // })
-    $('#reg-button').on('click',()=>{
-        $('#register_section').css('display','none');
-        $('.navbar').css('display','none');
-        $('body').css('background-image','none');
-        $('#login').css('display','block');
-        $('.dashbord').css('display','none');
-        // $(document.body).css('background-image', 'url(assets/image/Wild.png)');
-
-    })
     $('#log').on('click',()=>{
         $('#register_section').css('display','none');
         $('.navbar').css('display','none');
-        $('#login').css('display','none');
-        $(document.body).css('background-image', 'url(assets/image/dash.jpg)');
-        // $(document.body).css('background-color', 'black');
-        $('#dash').css('display','none');
-        $('.slide').css('display','none');
+        $('body').css('background-image','none');
+        $('#userSingUp').css('display','block');
         $('.dashbord').css('display','none');
-        $('#register_section').css('display','block');
+        $('.card-login').css('display','none');
+        $('.bg-img').css('display','block');
+        $('#logingForm').css('display','block');
+        // $(document.body).css('background-image', 'url(assets/image/Wild.png)');
 
     })
+    $('#userSingUp').on('click',()=>{
+        $('.navbar').css('display','none');
+        $('#login').css('display','none');
+        // $(document.body).css('background-image', 'url(assets/image/dash.jpg)');
+        // $(document.body).css('background-color', 'black');
+        $('.dashbord').css('display','none');
+        $('.card-login').css('display','block');
+        $('#logingForm').css('display','none');
+        $('.bg-img').css('display','block');
+
+    })
+    // $('#userLogingbtn').on('click',()=>{
+    //     $('#register_section').css('display','none');
+    //     $('.navbar').css('display','block');
+    //     $('#login').css('display','none');
+    //     // $(document.body).css('background-image', 'url(assets/image/dash.jpg)');
+    //     // $(document.body).css('background-color', 'black');
+    //     $('.dashbord').css('display','block');
+    //     $('.card-login').css('display','none');
+    //     $('#logingForm').css('display','none');
+    //     $('.bg-img').css('display','none');
+    //
+    // })
     $('#customer').on('click',()=>{
         $('#register_section').css('display','none');
         $('.navbar').css('display','block');
