@@ -34,6 +34,9 @@ $("#btnsaveEmployee").click(function () {
         url: "http://localhost:8080/shoe/api/v1/employee",
         processData: false,
         contentType: false,
+        headers: {
+            'Authorization': 'Bearer ' + token
+        },
         data: formData,
         success: function (data) {
             Swal.fire(
@@ -65,12 +68,16 @@ function getSelectedRadioButtonValue() {
 }
 
 function fetchEmployeeData() {
+    console.log(token)
     var tableBody = $('#employeetbl');
 
     $.ajax({
         method: 'GET',
         url: "http://localhost:8080/shoe/api/v1/employee",
         async: true,
+        headers: {
+            'Authorization': 'Bearer ' + token
+        },
         success: function (employee) {
             tableBody.empty();
 
@@ -170,6 +177,9 @@ $(document).ready(function () {
                     contentType:"application/json",
                     url:"http://localhost:8080/shoe/api/v1/employee/"+employeeID,
                     async:true,
+                    headers: {
+                        'Authorization': 'Bearer ' + token
+                    },
                     success: function (data) {
                         fetchEmployeeData();
                         cleanData()
@@ -216,6 +226,9 @@ $(document).ready(function (){
             contentType:"application/json",
             url:"http://localhost:8080/shoe/api/v1/employee",
             async:true,
+            headers: {
+                'Authorization': 'Bearer ' + token
+            },
             data:JSON.stringify({
                 employee_code:code,
                 name:name,

@@ -17,6 +17,9 @@ $(document).ready(function (){
             contentType:"application/json",
             url:"http://localhost:8080/shoe/api/v1/supplier",
             async:true,
+            headers: {
+                'Authorization': 'Bearer ' + token
+            },
             data:JSON.stringify({
               name:name,
                 category:catagory,
@@ -37,7 +40,7 @@ $(document).ready(function (){
                     'Customer has been saved successfully!',
                     'success'
                 );
-                fetchCustomerData();
+                loadTable()
                 cleanData();
             },
             error: function (xhr, exception) {
@@ -67,7 +70,7 @@ $(document).ready(function () {
         });
     });
 });
-function fetchCustomerData() {
+function fetchSupplierData() {
     var tableBody = $('#supplierTbl');
 
     // Fetch customer data using AJAX
@@ -75,6 +78,9 @@ function fetchCustomerData() {
         method: 'GET',
         url: "http://localhost:8080/shoe/api/v1/supplier",
         async: true,
+        headers: {
+            'Authorization': 'Bearer ' + token
+        },
         success: function (suppliers) {
             tableBody.empty();
 
@@ -154,6 +160,9 @@ $(document).ready(function (){
             contentType:"application/json",
             url:"http://localhost:8080/shoe/api/v1/supplier",
             async:true,
+            headers: {
+                'Authorization': 'Bearer ' + token
+            },
             data:JSON.stringify({
                 code:SupplierId,
                 name:name,
@@ -175,7 +184,7 @@ $(document).ready(function (){
                     'success'
 
                 );
-                fetchCustomerData();
+                loadTable();
                 cleanData();
             },
             error: function (xhr, exception) {
@@ -216,8 +225,11 @@ $(document).ready(function () {
                     contentType:"application/json",
                     url:"http://localhost:8080/shoe/api/v1/supplier/"+SupplierId,
                     async:true,
+                    headers: {
+                        'Authorization': 'Bearer ' + token
+                    },
                     success: function (data) {
-                        fetchCustomerData();
+                        fetchSupplierData();
                         cleanData()
                     },
                 })

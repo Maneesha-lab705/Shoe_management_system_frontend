@@ -12,6 +12,9 @@ const loaditemId = () => {
         method: 'GET',
         url: "http://localhost:8080/shoe/api/v1/item",
         async:true,
+        headers: {
+            'Authorization': 'Bearer ' + token
+        },
         success: function (item) {
             var selectElement = $("#itemCode");
             selectElement.empty();
@@ -39,6 +42,9 @@ $("#itemCode").on("change", function() {
         method: 'GET',
         url: "http://localhost:8080/shoe/api/v1/item",
         async:true,
+        headers: {
+            'Authorization': 'Bearer ' + token
+        },
         success: function (items) {
             items.forEach(function (item) {
 
@@ -60,6 +66,9 @@ const loadSupplierId = () => {
         method: 'GET',
         url: "http://localhost:8080/shoe/api/v1/supplier",
         async:true,
+        headers: {
+            'Authorization': 'Bearer ' + token
+        },
         success: function (supplier) {
             var selectElement = $("#supplierCode");
             selectElement.empty();
@@ -86,6 +95,9 @@ $("#supplierCode").on("change", function() {
         method: 'GET',
         url: "http://localhost:8080/shoe/api/v1/supplier",
         async:true,
+        headers: {
+            'Authorization': 'Bearer ' + token
+        },
         success: function (suppliers) {
             suppliers.forEach(function (supplier) {
 
@@ -187,6 +199,9 @@ function getOrderDetailArray() {
             contentType:"application/json",
             url: "http://localhost:8080/shoe/api/v1/inventory",
             async:true,
+            headers: {
+                'Authorization': 'Bearer ' + token
+            },
             data: JSON.stringify(inventDetailArray),
             success: function() {
                 Swal.fire(

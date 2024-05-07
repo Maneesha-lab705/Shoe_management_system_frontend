@@ -68,6 +68,9 @@
                     <a class="nav-link text-white" id="inventory" href="#">Inventory</a>
                 </li>
                 <li class="nav-item">
+                    <a class="nav-link text-white" id="orders" href="#">Orders</a>
+                </li>
+                <li class="nav-item">
                     <a class="nav-link text-white" id="item" href="#">Item</a>
                 </li>
             </ul>
@@ -735,7 +738,7 @@
         <!-- View Customer Details Table End -->
     </div>
 </main>
-<!////Suppliyer///////>
+<!--<!////Suppliyer///////>-->
 <section id="supplier-section">
 <form  id="suplierForm">
     <div class="form-row mt-lg-auto ">
@@ -916,7 +919,7 @@
                 <h4 class="text-center p-2 text-light rounded-3" style="background: #16A085">Manage Item</h4>
 
                 <div class="mb-3 ms-3 me-3 mt-3 ">
-                    <label class="fw-bold" for="searchSupplierId">Search Item :</label>
+                    <label class="fw-bold" for="searchItemId">Search Item :</label>
                     <input class="form-control me-2 mt-2" id="searchItemId" placeholder="Input Name/NIC/Tp Here"
                            type="search">
                 </div>
@@ -1100,23 +1103,130 @@
         </div>
     </div>
 </main>
-<!---------------------------------Place Inventory end---------------------->-->-->
+<!---------------------------------Place Inventory end---------------------->
+<!---------------------------------order section start---------------------->
+<div id="order-section" class="container">
+    <div class="col">
+        <h1 class="title">Place Order</h1>
+    </div>
+    <div class="row">
+        <div class="col col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12 data" >
+            <u class="topic"><h3 >Invoice Data</h3></u>
+            <form>
+                <div class="mb-3">
+                    <input id="orderId" class="form-control-input" type="text" required>
+                    <label for="orderId" class="form-label">Order Id</label>
+                </div>
+                <div class="mb-3">
+                    <input class="form-control-input" id="date" type="date" required>
+                    <label for="date" class="form-label">Order Date</label>
+                </div>
+                <div class="mb-3">
+                    <input class="form-control-input" id="customer-id" type="text" required>
+                    <!--                    <input class="form-control-input" id="selectCusID" type="checkbox" required>-->
+                    <select name="customer_id" id="selectCusID">Customer Id</select>
+                    <label for="selectCusID" class="form-label">Customer Id</label>
+                </div>
+                <div class="mb-3">
+                    <input id="name-order" class="form-control-input" type="text" required>
+                    <label class="form-label" for="name-order">Name</label>
+                </div>
+            </form>
+        </div>
+        <div class="col col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12 data">
+            <u class="topic"><h3 >Item Details</h3></u>
+            <form>
+                <div class="mb-3">
+                    <!--                    <input class="form-control-input" id="itemCode" type="text" required>-->
+                    <select name="item_code" id="orderItemCode">Item Code</select>
+                    <input class="form-control-input" id="item-Code" type="text" required>
+                    <label for="itemCode" class="form-label">Item Code</label>
+                </div>
+                <div class="mb-3">
+                    <input id="description-order" class="form-control-input" type="text" required>
+                    <label class="form-label" for="description-order">Description</label>
+                </div>
+                <div class="mb-3">
+                    <input id="price-order" class="form-control-input" type="number" required>
+                    <label class="form-label" for="price-order">Price</label>
+                </div>
+                <div class="mb-3">
+                    <input id="qty-order" class="form-control-input" type="number" required>
+                    <label class="form-label" for="qty-order">Qty</label>
+                </div>
+                <div class="mb-3">
+                    <input id="orderQty" class="form-control-input" type="number" required>
+                    <label class="form-label" for="orderQty">Order Qty</label>
+                </div>
+                <div class="mt-4 mb-5" id="add-button">
+                    <button id="add_item" type="button" class="btn btn-primary">Add Item</button>
+                </div>
+            </form>
+        </div>
+        <div class="col col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12 data">
+            <form>
+                <div class="mb-3">
+                    <span id="total-text">Total : </span>
+                    <input id="total" class="form-control-input" type="number" required>
+                </div>
+                <!--                <div class="mb-3">-->
+                <!--                    <input id="cash" class="form-control-input" type="number" required>-->
+                <!--                    <label class="form-label" for="cash">Cash</label>-->
+                <!--                </div>-->
+                <!--                <div class="mb-3">-->
+                <!--                    <input id="balance" class="form-control-input" type="number" required>-->
+                <!--                    <label class="form-label" for="balance">Balance</label>-->
+                <!--                </div>-->
+                <div class="mt-4 mb-5" id="place-order">
+                    <button type="button" class="btn btn-success">Place Order</button>
+                </div>
+            </form>
+        </div>
+        <div class="col col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12" style="height:180px; overflow-y: scroll">
+            <table class="table table-bordered text-white">
+                <thead class="bg-primary">
+                <tr>
+                    <th>Item Code</th>
+                    <th>Description</th>
+                    <th>Price</th>
+                    <th>Quantity</th>
+                    <th>Total</th>
+                </tr>
+                </thead>
+                <tbody class="bg-light text-dark" id="order-table-body">
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+<!---------------------------------order section end---------------------->
 
-<script type="module" src="assets/js/dashbord.js"></script>
-<script src="assets/lib/jquery.min.js"></script>
+
+<!--Import js for bootstrap-->
 <script src="assets/lib/bootstrap/js/bootstrap.min.js"></script>
+
+<!--import jQuery library-->
+<script rel="script" src="assets/lib/jquery.min.js"></script>
+
+<!--import fontawesome library-->
 <script src="assets/lib/fontawesome/js/all.min.js"></script>
 
-
-<script type="module" src="controller/CustomerController.js"></script>
-<script type="module" src="controller/EmployeeController.js"></script>
-<script type="module" src="controller/SupplierController.js"></script>
-<script type="module" src="controller/Item.js"></script>
-<script type="module" src="controller/inventory.js"></script>
-<script type="module" src="controller/UserController.js"></script>
-
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+
+<script  src="controller/UserController.js"></script>
+<script  src="assets/js/dashbord.js"></script>
+<script  src="controller/CustomerController.js"></script>
+<script  src="controller/EmployeeController.js"></script>
+<script  src="controller/SupplierController.js"></script>
+<script  src="controller/Item.js"></script>
+<script src="controller/inventory.js"></script>
+
+
 <script>
 
 
@@ -1130,6 +1240,7 @@
     $('#itemSection').css('display','none');
     $('.dashbord').css('display','none');
     $('#inventorySection').css('display','none');
+    $('#order-section').css('display','none');
     $(document.body).css('background-color', '#121837');
     // $(document.body).css('background-image', 'url(assets/image/dash.jpg');
 
@@ -1171,6 +1282,11 @@
         // $(document.body).css('background-image', 'url(assets/image/Wild.png)');
 
     })
+
+    $('#btnSaveItem').on('click',()=>{
+        $('.dashbord').css(('display','none'));
+    })
+
     $('#userSingUp').on('click',()=>{
         $('.navbar').css('display','none');
         $('#login').css('display','none');
@@ -1306,7 +1422,20 @@
         $('#itemSection').css('display','none');
         $(document.body).css('background-image','none' );
     })
-
+    $('#orders').on('click',()=>{
+        $('.dashbord').css('display','none');
+        $('#register_section').css('display','none');
+        $('.navbar').css('display','block');
+        $('#login').css('display','none');
+        // $(document.body).css('background-color', '#8F0094');
+        $('#employee-section').css('display','none');
+        $('#customer-section').css('display','none');
+        $('#inventorySection').css('display','none');
+        $('#supplier-section').css('display','none');
+        $('#itemSection').css('display','none');
+        $('#order-section').css('display','block');
+        $(document.body).css('background-image','none' );
+    })
 
 </script>
 </body>

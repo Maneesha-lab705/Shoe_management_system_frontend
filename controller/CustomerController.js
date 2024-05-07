@@ -1,9 +1,10 @@
+
 var customerID =null;
-$(document).ready(function (){
     $("#btnSaveCustomer").click(function (){
+        console.log(token)
         // let customer_id = $("#customer_id").val().AUTO;
         let name = $("#txtCusName").val();
-        let gender = getSelectedRadioButtonValue();
+        let gender = CustomergetSelectedRadioButtonValue();
         let joindate = $("#JoinDate").val();
         let level = $("#level").val();
         let totPoint = $("#point").val();
@@ -20,6 +21,9 @@ $(document).ready(function (){
             contentType:"application/json",
             url:"http://localhost:8080/shoe/api/v1/customer",
             async:true,
+            headers: {
+                'Authorization': 'Bearer ' + token
+            },
             data:JSON.stringify({
                 customer_name:name,
                 gender:gender,
@@ -33,12 +37,12 @@ $(document).ready(function (){
             }),
 
             success: function (data) {
+
                 Swal.fire(
                     'Success!',
                     'Customer has been saved successfully!',
                     'success'
                 );
-                fetchCustomerData();
                 cleanData();
             },
             error: function (xhr, exception) {
@@ -52,9 +56,8 @@ $(document).ready(function (){
         })
          cleanData();
     })
-})
 
-function getSelectedRadioButtonValue() {
+function CustomergetSelectedRadioButtonValue() {
     var radioButtons = document.getElementsByName('flexRadioDefault');
 
     for (var i = 0; i < radioButtons.length; i++) {
@@ -65,29 +68,32 @@ function getSelectedRadioButtonValue() {
     }
 }
 
-$(document).ready(function () {
-    // Function to fetch and display customer data in the table body
-
-    // Call fetchCustomerData on page load
-    fetchCustomerData();
-
-    // Search functionality
-    $('#searchCusId').on("keyup", function () {
-        let value = $(this).val().toLowerCase();
-        $("#customerTable tr").filter(function () {
-            $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1);
-        });
-    });
-});
-function fetchCustomerData() {
-    var tableBody = $('#customerTable');
-
+// $(document).ready(function () {
+//     // Function to fetch and display customer data in the table body
+//
+//     // Call fetchCustomerData on page load
+//     fetchCustomerTable();
+//
+//     // Search functionality
+//     $('#searchCusId').on("keyup", function () {
+//         let value = $(this).val().toLowerCase();
+//         $("#customerTable tr").filter(function () {
+//             $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1);
+//         });
+//     });
+// });
+const loadCustomerData = () => {
     // Fetch customer data using AJAX
+    var tableBody=$('#customerTable')
     $.ajax({
         method: 'GET',
         url: "http://localhost:8080/shoe/api/v1/customer",
         async: true,
+        headers: {
+            'Authorization': 'Bearer ' + token
+        },
         success: function (customers) {
+            console.log(customers);
             tableBody.empty();
 
             customers.forEach(function (customer) {
@@ -106,7 +112,6 @@ function fetchCustomerData() {
 
                 tableBody.append(row);
 
-                // // Add click event for each table row
                 row.click(function () {
                     // Get data from the clicked row
                     customerID = $(this).find('td:eq(0)').text();
@@ -149,13 +154,16 @@ function fetchCustomerData() {
                     $("#address").val(address);
                     $("#email").val(email);
                 });
+
             });
         },
         error: function (xhr, status, error) {
             console.error("Failed to fetch customer data. Status code:", status);
+            console.error("Error:", error);
         }
     });
 }
+// // Add click event for each table row
 
 $(document).ready(function (){
     $("#btnUpdateCustomer").click(function (){
@@ -177,6 +185,9 @@ $(document).ready(function (){
             contentType:"application/json",
             url:"http://localhost:8080/shoe/api/v1/customer",
             async:true,
+            headers: {
+                'Authorization': 'Bearer ' + token
+            },
             data:JSON.stringify({
                 customer_code:customerID,
                 customer_name:name,
@@ -237,6 +248,9 @@ $(document).ready(function () {
                     contentType:"application/json",
                     url:"http://localhost:8080/shoe/api/v1/customer/"+customerID,
                     async:true,
+                    headers: {
+                        'Authorization': 'Bearer ' + token
+                    },
                     success: function (data) {
                         fetchCustomerData();
                         cleanData()

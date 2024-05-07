@@ -11,6 +11,9 @@ $(document).ready(function (){
             contentType:"application/json",
             url:"http://localhost:8080/shoe/api/v1/item",
             async:true,
+            headers: {
+                'Authorization': 'Bearer ' + token
+            },
             data:JSON.stringify({
                 description:description,
                 itemGender:itemgender,
@@ -24,7 +27,8 @@ $(document).ready(function (){
                     'Customer has been saved successfully!',
                     'success'
                 );
-                fetchCustomerData();
+                fetchItemData();
+                loadTable();zx
                 cleanData();
             },
             error: function (xhr, exception) {
@@ -43,7 +47,7 @@ $(document).ready(function () {
     // Function to fetch and display customer data in the table body
 
     // Call fetchCustomerData on page load
-    fetchCustomerData();
+    fetchItemData()
 
     // Search functionality
     $('#searchItemId').on("keyup", function () {
@@ -53,7 +57,7 @@ $(document).ready(function () {
         });
     });
 });
-function fetchCustomerData() {
+function fetchItemData() {
     var tableBody = $('#itemTable');
 
     // Fetch customer data using AJAX
@@ -61,6 +65,9 @@ function fetchCustomerData() {
         method: 'GET',
         url: "http://localhost:8080/shoe/api/v1/item",
         async: true,
+        headers: {
+            'Authorization': 'Bearer ' + token
+        },
         success: function (items) {
             tableBody.empty();
 
@@ -126,8 +133,11 @@ $(document).ready(function () {
                     contentType:"application/json",
                     url:"http://localhost:8080/shoe/api/v1/item/"+itemCode,
                     async:true,
+                    headers: {
+                        'Authorization': 'Bearer ' + token
+                    },
                     success: function (data) {
-                        fetchCustomerData();
+                        fetchItemData();
                         cleanData()
                     },
                 })
