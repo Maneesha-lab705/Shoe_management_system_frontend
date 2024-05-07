@@ -1,3 +1,4 @@
+let token='';
 $("#singUp").click(function () {
     console.log("user")
     var signupData = {
@@ -15,8 +16,9 @@ $("#singUp").click(function () {
         url:"http://localhost:8080/shoe/api/v1/auth/signup",
         async:true,
         data: JSON.stringify(signupData),
-        success: function (token1) {
-            console.log(token1); // Log the token returned by the backend
+        success: function (response) {
+             // Log the token returned by the backend
+            token=response.token;
             Swal.fire(
                 'Success!',
                 'Item has been saved successfully!',
@@ -32,44 +34,57 @@ $("#singUp").click(function () {
         }
     })
 });
+
 $("#userLogingbtn").click(function () {
-    console.log("user")
-    var signupData = {
+    var signingData = {
         email: $('#loginEmail').val(),
         password: $('#loginPassword').val(),
-
     };
-
-    console.log(signupData)
     $.ajax({
         method:"POST",
         contentType:"application/json",
         url:"http://localhost:8080/shoe/api/v1/auth/signin",
         async:true,
-        data: JSON.stringify(signupData),
-        success: function (token1) {
-            console.log(token1); // Log the token returned by the backend
+        data: JSON.stringify(signingData),
+        success: function (response) {
+            token=response.token
             Swal.fire(
                 'Success!',
                 'Login successfully!',
                 'success'
             );
-            $('#register_section').css('display','none');
-            $('.navbar').css('display','block');
-            $('#login').css('display','none');
-            // $(document.body).css('background-image', 'url(assets/image/dash.jpg)');
-            // $(document.body).css('background-color', 'black');
-            $('.dashbord').css('display','block');
-            $('.card-login').css('display','none');
-            $('#logingForm').css('display','none');
-            $('.bg-img').css('display','none');
+            loadTable();
+            loadDashbord()
+
         },
         error: function (xhr, exception) {
             Swal.fire(
                 'Error!',
-                'Your Email Or Password is wrong!',
+                'User name or Password is wrong please enter correct one !',
                 'error'
             );
         }
     })
 });
+const loadTable = () => {
+    loadCustomerData()
+    fetchEmployeeData()
+    fetchItemData()
+    fetchSupplierData()
+    loadSupplierId()
+    loaditemId()
+
+}
+const loadDashbord = () =>{
+    $('#register_section').css('display','none');
+    $('.navbar').css('display','block');
+    $('#login').css('display','none');
+    // $(document.body).css('background-image', 'url(assets/image/dash.jpg)');
+    // $(document.body).css('background-color', 'black');
+    $('.dashbord').css('display','block');
+    $('.card-login').css('display','none');
+    $('#logingForm').css('display','none');
+    $('.bg-img').css('display','none');
+
+}
+
