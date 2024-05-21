@@ -19,6 +19,7 @@
     <link rel="stylesheet" href="assets/styles/item.css">
     <link rel="stylesheet" href="assets/styles/imageBox.css">
     <link rel="stylesheet" href="assets/styles/inventory.css">
+    <link rel="stylesheet" href="assets/styles/orders.css">
     <link rel="stylesheet" href="assets/styles/stylesForCustomer.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css">
 
@@ -960,12 +961,12 @@
 </main>
 <!-- Item End-->
 <!---------------------------------item section end---------------------->
-<!---------------------------------Place Inventory start---------------------->-->-->
+<!---------------------------------Place Inventory start---------------------->
 <main class="container-fluid" id="inventorySection">
     <!-- Item Header Start -->
     <div class="container d-flex flex-grow-1 flex-column">
         <div class="position-relative d-inline-block mt-3 mt-lg-4 mt-md-4">
-            <h2 id="H1-inventory" style="font-family: 'Arial Rounded MT Bold',serif"><i class="bi bi-people"></i> Place Inventory
+            <h2 id="H1-inventory" style="font-family: 'Arial Rounded MT Bold',serif" ><i class="bi bi-people"></i> Place Inventory
             </h2>
         </div>
     </div>
@@ -1110,64 +1111,76 @@
         <h1 class="title">Place Order</h1>
     </div>
     <div class="row">
-        <div class="col col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12 data" >
+        <div class="col col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12  mt-5 data" >
             <u class="topic"><h3 >Invoice Data</h3></u>
             <form>
-                <div class="mb-3">
-                    <input id="orderId" class="form-control-input" type="text" required>
-                    <label for="orderId" class="form-label">Order Id</label>
-                </div>
-                <div class="mb-3">
-                    <input class="form-control-input" id="date" type="date" required>
-                    <label for="date" class="form-label">Order Date</label>
-                </div>
-                <div class="mb-3">
-                    <input class="form-control-input" id="customer-id" type="text" required>
-                    <!--                    <input class="form-control-input" id="selectCusID" type="checkbox" required>-->
-                    <select name="customer_id" id="selectCusID">Customer Id</select>
-                    <label for="selectCusID" class="form-label">Customer Id</label>
+<!--                <div class="mb-3">-->
+<!--                    <input id="orderId" class="form-control-input" type="text" required>-->
+<!--                    <label for="orderId" class="form-label">Order Id</label>-->
+<!--                </div>-->
+
+                <div class="mb-3 col-5" >
+                    <select name="customer_id" id="selectCusID">
+                        <option></option>
+                    </select>
+                    <label for="selectCusID" id="lblCustomerid" class="form-label">Customer Id</label>
                 </div>
                 <div class="mb-3">
                     <input id="name-order" class="form-control-input" type="text" required>
-                    <label class="form-label" for="name-order">Name</label>
+                    <label id="lblCustomerName" class="form-label" for="name-order">Name</label>
+                </div>
+                <div class="mb-3">
+                    <input id="point" class="form-control-input" type="text" required>
+                    <label id="point" class="form-label" for="point">Points</label>
                 </div>
             </form>
         </div>
         <div class="col col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12 data">
             <u class="topic"><h3 >Item Details</h3></u>
-            <form>
+            <form id="orderSectionForm">
                 <div class="mb-3">
                     <!--                    <input class="form-control-input" id="itemCode" type="text" required>-->
-                    <select name="item_code" id="orderItemCode">Item Code</select>
-                    <input class="form-control-input" id="item-Code" type="text" required>
-                    <label for="itemCode" class="form-label">Item Code</label>
+                    <select name="item_code" id="orderItemCode">
+                        <option></option>
+                    </select>
+                    <label for="itemCode" id="lblItemCode" class="form-label">Item Code</label>
                 </div>
                 <div class="mb-3">
                     <input id="description-order" class="form-control-input" type="text" required>
-                    <label class="form-label" for="description-order">Description</label>
+                    <label class="form-label"  id="lblDesc" for="description-order">Description</label>
                 </div>
                 <div class="mb-3">
                     <input id="price-order" class="form-control-input" type="number" required>
-                    <label class="form-label" for="price-order">Price</label>
+                    <label class="form-label"  id="lblPrice" for="price-order">Price</label>
                 </div>
                 <div class="mb-3">
                     <input id="qty-order" class="form-control-input" type="number" required>
-                    <label class="form-label" for="qty-order">Qty</label>
+                    <label class="form-label"  id="lblQty" for="qty-order">Qty</label>
                 </div>
                 <div class="mb-3">
                     <input id="orderQty" class="form-control-input" type="number" required>
-                    <label class="form-label" for="orderQty">Order Qty</label>
+                    <label class="form-label" id="lblOrderQty" for="orderQty">Order Qty</label>
                 </div>
-                <div class="mt-4 mb-5" id="add-button">
-                    <button id="add_item" type="button" class="btn btn-primary">Add Item</button>
+                <div class="mb-3">
+                    <input id="size_shoe" class="form-control-input" type="number" required>
+                    <label class="form-label" id="shoe_size" for="size_shoe">Size</label>
+                </div>
+                <div class="mt-4 mb-5 " id="add-button">
+                    <button id="add_item" type="button" class="btn btn-success">Add Item</button>
                 </div>
             </form>
         </div>
         <div class="col col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12 data">
             <form>
                 <div class="mb-3">
-                    <span id="total-text">Total : </span>
+                    <span id="total-text" style="color: white">Total : </span>
                     <input id="total" class="form-control-input" type="number" required>
+                </div>
+                <div class="mb-3 col-5" >
+                    <select name="paymentType" id="paymentType">
+                        <option></option>
+                    </select>
+                    <label for="paymentType" id="lblPaymentType" class="form-label">PaymentType</label>
                 </div>
                 <!--                <div class="mb-3">-->
                 <!--                    <input id="cash" class="form-control-input" type="number" required>-->
@@ -1178,7 +1191,7 @@
                 <!--                    <label class="form-label" for="balance">Balance</label>-->
                 <!--                </div>-->
                 <div class="mt-4 mb-5" id="place-order">
-                    <button type="button" class="btn btn-success">Place Order</button>
+                    <button type="button" class="btn btn-success" id="placeOrderbtn">Place Order</button>
                 </div>
             </form>
         </div>
@@ -1200,7 +1213,86 @@
     </div>
 </div>
 <!---------------------------------order section end---------------------->
+<!---------------------------------payment section start---------------------->
+<div class="container payment">
+    <div class="row" id="paymentRow">
+        <div class="col-12 mt-4">
+            <div class="card p-3 paymentMethod">
+                <p class="mb-0 fw-bold h4">Payment Methods</p>
+            </div>
+        </div>
+        <div class="col-12">
+            <div class="card p-3 frame">
+                <div class="card-body border p-0">
+                    <div class="card-body border p-0">
+                        <p>
+                            <a class="btn btn-primary p-2 w-100 h-100 d-flex align-items-center justify-content-between"
+                               data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="true"
+                               aria-controls="collapseExample">
+                                <span class="fw-bold">Credit Card</span>
+                                <span class="">
+                                    <span class="fab fa-cc-amex"></span>
+                                    <span class="fab fa-cc-mastercard"></span>
+                                    <span class="fab fa-cc-discover"></span>
+                                </span>
+                            </a>
+                        </p>
+                        <div class="collapse show p-3 pt-0" id="ss">
+                            <div class="row">
+                                <div class="col-lg-5 mb-lg-0 mb-3">
+                                    <p class="h4 mb-0">Summary</p>
+                                    <p class="mb-0"><span class="fw-bold">Product:</span><span class="c-green">: Name of
+                                            product</span>
+                                    </p>
+                                    <p class="mb-0">
+                                        <span class="fw-bold">Price:</span>
+                                        <span class="c-green">:$452.90</span>
+                                    </p>
+                                </div>
+                                <div class="col-lg-7">
+                                    <form action="" class="form">
+                                        <div class="row">
+                                            <div class="col-12">
+                                                <div class="form__div">
+                                                    <input type="text" class="form-control" placeholder=" ">
+                                                    <label  class="form__label">Card Number</label>
+                                                </div>
+                                            </div>
 
+                                            <div class="col-6">
+                                                <div class="form__div">
+                                                    <input type="text" class="form-control" placeholder=" ">
+                                                    <label  class="form__label">MM / yy</label>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-6">
+                                                <div class="form__div">
+                                                    <input type="password" class="form-control" placeholder=" ">
+                                                    <label class="form__label">cvv code</label>
+                                                </div>
+                                            </div>
+                                            <div class="col-12">
+                                                <div class="form__div">
+                                                    <input type="text" class="form-control" placeholder=" ">
+                                                    <label  class="form__label">name on the card</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 mt-5">
+                <button id="add_item" type="button" class="btn btn-primary">Pay</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!---------------------------------payment section end---------------------->
 
 <!--Import js for bootstrap-->
 <script src="assets/lib/bootstrap/js/bootstrap.min.js"></script>
@@ -1230,7 +1322,8 @@
 <script>
 
 
-    $('#login').css('display','block');
+    $('#login').css('display','none');
+    $('.payment').css('display','none');
     $('.card-login').css('display','none');
     $('.navbar').css('display','none');
     $('#customer-section').css('display','none');
@@ -1241,7 +1334,10 @@
     $('.dashbord').css('display','none');
     $('#inventorySection').css('display','none');
     $('#order-section').css('display','none');
-    $(document.body).css('background-color', '#121837');
+    $('#logingForm').css('display','block');
+    $('#order-section2').css('display','none');
+
+    $('.payment').css('display','none');
     // $(document.body).css('background-image', 'url(assets/image/dash.jpg');
 
 
@@ -1279,13 +1375,13 @@
         $('.card-login').css('display','none');
         $('.bg-img').css('display','block');
         $('#logingForm').css('display','block');
+        $('.payment').css('display','none');
+        $('#order-section2').css('display','none');
         // $(document.body).css('background-image', 'url(assets/image/Wild.png)');
 
     })
 
-    $('#btnSaveItem').on('click',()=>{
-        $('.dashbord').css(('display','none'));
-    })
+
 
     $('#userSingUp').on('click',()=>{
         $('.navbar').css('display','none');
@@ -1296,6 +1392,8 @@
         $('.card-login').css('display','block');
         $('#logingForm').css('display','none');
         $('.bg-img').css('display','block');
+        $('.payment').css('display','none');
+        $('#order-section2').css('display','none');
 
     })
     // $('#userLogingbtn').on('click',()=>{
@@ -1322,6 +1420,9 @@
         $('#supplier-section').css('display','none');
         $('#inventorySection').css('display','none');
         $('#itemSection').css('display','none');
+        $('#order-section').css('display','none');
+        $('.payment').css('display','none');
+        $('#order-section2').css('display','none');
 
 
     });
@@ -1337,6 +1438,9 @@
         $('.dashbord').css('display','none');
         $('#itemSection').css('display','none');
         $('#inventorySection').css('display','none');
+        $('#order-section').css('display','none');
+        $('.payment').css('display','none');
+        $('#order-section2').css('display','none');
 
         });
     $('#supplier').on('click',()=> {
@@ -1352,6 +1456,9 @@
         $('#supplier-section').css('display', 'block');
         $('#itemSection').css('display', 'none');
         $('#inventorySection').css('display', 'none');
+        $('#order-section').css('display','none');
+        $('.payment').css('display','none');
+        $('#order-section2').css('display','none');
     });
     $('#item').on('click',()=> {
         $('#register_section').css('display', 'none');
@@ -1367,6 +1474,9 @@
         $('#itemSection').css('display', 'block');
         $('#customer-section').css('display','none');
         $('#inventorySection').css('display','none');
+        $('#order-section').css('display','none');
+        $('.payment').css('display','none');
+        $('#order-section2').css('display','none');
     });
         // $(document).ready(function() {
         //     // Function to perform the task when scrolling
@@ -1407,6 +1517,9 @@
         $('#customer-section').css('display','none');
         $('#inventorySection').css('display','none');
         $(document.body).css('background-image','none' );
+        $('#order-section').css('display','none');
+        $('.payment').css('display','none');
+        $('#order-section2').css('display','none');
     })
 
     $('#inventory').on('click',()=>{
@@ -1414,27 +1527,39 @@
         $('#register_section').css('display','none');
         $('.navbar').css('display','block');
         $('#login').css('display','none');
-        // $(document.body).css('background-color', '#8F0094');
+        $(document.body).css('background-color', '#121837');
         $('#employee-section').css('display','none');
         $('#customer-section').css('display','none');
         $('#inventorySection').css('display','block');
         $('#supplier-section').css('display','none');
         $('#itemSection').css('display','none');
         $(document.body).css('background-image','none' );
+        $('#order-section').css('display','none');
+        $('.payment').css('display','none');
+        $('#order-section2').css('display','none');
     })
     $('#orders').on('click',()=>{
         $('.dashbord').css('display','none');
         $('#register_section').css('display','none');
         $('.navbar').css('display','block');
         $('#login').css('display','none');
-        // $(document.body).css('background-color', '#8F0094');
+        $(document.body).css('background-color', '#121837');
         $('#employee-section').css('display','none');
         $('#customer-section').css('display','none');
         $('#inventorySection').css('display','none');
         $('#supplier-section').css('display','none');
         $('#itemSection').css('display','none');
         $('#order-section').css('display','block');
+        $('.bg-img').css('display','none');
         $(document.body).css('background-image','none' );
+        $('.payment').css('display','none');
+        $('#order-section2').css('display','none');
+
+    })
+    $('#placeOrderbtn').on('click',()=>{
+        $('.payment').css('display','block');
+        $('#order-section').css('display','none');
+
     })
 
 </script>

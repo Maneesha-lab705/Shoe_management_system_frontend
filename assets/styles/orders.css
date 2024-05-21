@@ -1,0 +1,35 @@
+#order-section{
+    top: 10vh;
+}
+#order-section>title,.topic{
+    color: red;
+}
+.orderDate{
+    color: white;
+}
+#lblCustomerid,#lblCustomerName,#lblItemCode,#lblDesc,#lblOrderQty,#lblPrice,#lblQty,#lblPaymentType{
+    color: white;
+}
+#selectCusID,#orderItemCode,#name-order,#description-order,#price-order,#qty-order,#orderQty,#paymentType,#size_shoe,#point,#shoe_size{
+    width: 150px;
+    height: 25px;
+    background-color: transparent;
+    border-bottom-color: red;
+    border-top-color: transparent;
+    border-left-color: transparent;
+    border-right-color: transparent;
+    color: white;
+
+}
+/*///////////////////payment///////////////////*/
+
+.paymentMethod{
+    background-color: #20c997;
+}
+.frame{
+    background-color: #0dcaf0;
+}
+.payment{
+    top: 10vh;
+    width: 60vw;
+}
