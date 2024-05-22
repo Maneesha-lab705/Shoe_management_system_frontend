@@ -129,11 +129,6 @@ $(document).ready(function (){
         let profit_margin = $("#prMargin").val();
         let qty = $("#inventoryQty").val();
         let status = $("#itemStatus").val();
-        console.log(supplier_name)
-        console.log(item_pic)
-        console.log(category)
-        console.log(status)
-        console.log(supplier_code)
 
 
         // Create a new row for the table
@@ -159,7 +154,7 @@ $(document).ready(function (){
 
     })
 })
-function getOrderDetailArray() {
+function getInventoryDetailArray() {
     var inventoryDtoList=[];
 
     $('#inventoryTable tr').each(function() {
@@ -191,7 +186,7 @@ function getOrderDetailArray() {
     $("#order").on("click", function() {
 
 
-        var inventDetailArray = getOrderDetailArray();
+        var inventDetailArray = getInventoryDetailArray();
 
         console.log(inventDetailArray)
         $.ajax({

@@ -73,7 +73,9 @@ const loadTable = () => {
     fetchSupplierData()
     loadSupplierId()
     loaditemId()
-
+    loadCustomerId()
+    loadItemIdOrder()
+    $("#orderTotal").val(0);
 }
 const loadDashbord = () =>{
     $('#register_section').css('display','none');

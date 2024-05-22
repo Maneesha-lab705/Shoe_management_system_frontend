@@ -34,13 +34,13 @@ main>h1{
 }
 
 .assignment{
-    position: relative;
-    margin: 0;
-    top: 20vh;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-
+    /*position: relative;*/
+    /*margin: 0;*/
+    /*top: 20vh;*/
+    /*display: flex;*/
+    /*flex-wrap: wrap;*/
+    /*justify-content: space-around;*/
+width: 50vw;
 
 }
 .cart{

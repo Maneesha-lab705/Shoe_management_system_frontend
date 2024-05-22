@@ -10,7 +10,7 @@
 #lblCustomerid,#lblCustomerName,#lblItemCode,#lblDesc,#lblOrderQty,#lblPrice,#lblQty,#lblPaymentType{
     color: white;
 }
-#selectCusID,#orderItemCode,#name-order,#description-order,#price-order,#qty-order,#orderQty,#paymentType,#size_shoe,#point,#shoe_size{
+#selectCusID,#orderItemCode,#name-order,#description-order,#price-order,#qty-order,#orderQty,#paymentType,#size_shoe,#point-order,#shoe_size{
     width: 150px;
     height: 25px;
     background-color: transparent;
@@ -20,6 +20,9 @@
     border-right-color: transparent;
     color: white;
 
+}
+#selectCusID,#orderItemCode{
+    background-color: black;
 }
 /*///////////////////payment///////////////////*/
 
