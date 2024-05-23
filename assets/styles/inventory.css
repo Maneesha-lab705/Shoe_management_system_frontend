@@ -1,6 +1,6 @@
-#inventorySelectItem,#supplierdetail,#priceDetail,#orderbtn{
-    width: 300px;
-    margin-right: 10px;
+#inventorySelectItem,#supplierdetail,#priceDetail,#orderbtnsection{
+    width: 200px;
+    margin-left: 50px;
     color: red;
 }
 #invenImage{
@@ -8,9 +8,19 @@
     height: 250px;
     border-radius: 100% ;
 }
-#order{
-    width: 200px;
+#order,#btnAddtoCart{
+    width: 150px;
     background-color: red;
+    font-size: 12px;
+}
+#btnAddtoCart{
+    width: 150px;
+    background-color: green;
+    font-size: 12px;
+}
+#invent{
+    position: relative;
+    left: 10vw;
 }
 #itemCode,#itemCategory,#desc,#size,#itemPic,#supplierCode,#sName,#sailPrice,#byPrice,#profit,#prMargin,#inventoryQty{
     border-bottom-color: red;
@@ -19,6 +29,7 @@
     border-right-color:black ;
     background-color: #161719;
     color: red;
+    width: 150px;
 }
 #H1-inventory{
     color: white;

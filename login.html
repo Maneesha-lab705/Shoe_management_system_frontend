@@ -96,7 +96,7 @@
     <div class="cardBox">
         <div class="card">
             <div>
-                <div class="numbers">1,504</div>
+                <div  id="totalSale" class="numbers">0</div>
                 <div class="cardName">Total sales </div>
             </div>
 
@@ -138,20 +138,59 @@
             </div>
         </div>
     </div>
+    <!--    admin panel start-->
+    <div class="container" id="admin-panel-section">
+        <h1 style="color: aqua" id="adminTopic">Admin Panel</h1>
+        <table class="data-table">
+            <tr>
+                <th>Description</th>
+                <th>Data</th>
+            </tr>
+            <tr>
+                <th>Date</th>
+                <td style="background-color: aliceblue">
+                    <input id="selectedDate" type="date">
+                </td>
+            </tr>
+            <tr>
+                <td style="background-color: aliceblue">Total Sales</td>
+                <td style="background-color: aliceblue"id="total-sales">$0.00</td>
+            </tr>
+            <tr>
+                <td style="background-color: aliceblue">Total Profit</td>
+                <td style="background-color: aliceblue" id="total-profit">$0.00</td>
+            </tr>
+            <tr>
+                <td style="background-color: aliceblue">The Most Sale Item</td>
+                <td style="background-color: aliceblue" id="most-sale-item">N/A</td>
+            </tr>
+            <tr>
+                <td style="background-color: aliceblue">A Picture of the Most Sale Item</td>
+                <td style="background-color: aliceblue" class="most-sale-item">
+                    <img id="most-sale-item-image" src="" alt="Most Sale Item">
+                </td>
+            </tr>
+            <tr>
+                <td style="background-color: aliceblue">The Most Sale Item Qty</td>
+                <td style="background-color: aliceblue" id="most-sale-item-qty">0</td>
+            </tr>
+        </table>
+    </div>
+    <!--    admin panel end-->
 
     <main id="itemcards">
         <div class="container-fluid bg-trasparent my-4 p-3" style="position: relative;">
             <div class="row row-cols-1 row-cols-xs-2 row-cols-sm-2 row-cols-lg-4 g-3">
                 <div class="col">
                     <div class="card h-100 shadow-sm">
-                        <img src="https://www.freepnglogos.com/uploads/notebook-png/download-laptop-notebook-png-image-png-image-pngimg-2.png" class="card-img-top" alt="..."> <div class="card-body"> <div class="clearfix mb-3"> <span class="float-start badge rounded-pill bg-primary">ASUS Rog</span> <span class="float-end price-hp">12354.00&euro;</span> </div> <h5 class="card-title">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam quidem eaque ut eveniet aut quis rerum. Asperiores accusamus harum ducimus velit odit ut. Saepe, iste optio laudantium sed aliquam sequi.</h5>
+                        <img src="https://images.pexels.com/photos/292999/pexels-photo-292999.jpeg?cs=srgb&dl=pexels-goumbik-292999.jpg&fm=jpg" class="card-img-top" alt="..."> <div class="card-body"> <div class="clearfix mb-3"> <span class="float-start badge rounded-pill bg-primary">ASUS Rog</span> <span class="float-end price-hp">12354.00&euro;</span> </div> <h5 class="card-title">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam quidem eaque ut eveniet aut quis rerum. Asperiores accusamus harum ducimus velit odit ut. Saepe, iste optio laudantium sed aliquam sequi.</h5>
                         <div class="text-center my-4"> <a href="#" class="btn btn-warning">Check offer</a>
                         </div>
                     </div>
                     </div>
                 </div>
                 <div class="col"> <div class="card h-100 shadow-sm">
-                <img src="https://www.freepnglogos.com/uploads/notebook-png/notebook-laptop-png-images-you-can-download-mashtrelo-14.png" class="card-img-top" alt="...">
+                <img src="https://clipart-library.com/images_k/shoe-transparent-background/shoe-transparent-background-12.jpg" class="card-img-top" alt="...">
                     <div class="card-body">
                         <div class="clearfix mb-3">
                             <span class="float-start badge rounded-pill bg-success">12354.00&euro;</span>
@@ -159,7 +198,7 @@
                         <h5 class="card-title">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam quidem eaque ut eveniet aut quis rerum. Asperiores accusamus harum ducimus velit odit ut. Saepe, iste optio laudantium sed aliquam sequi.</h5>
                         <div class="d-grid gap-2 my-4"> <a href="#" class="btn btn-warning">Check offer</a>
                         </div> </div> </div> </div> <div class="col"> <div class="card h-100 shadow-sm">
-                <img src="https://www.freepnglogos.com/uploads/notebook-png/download-laptop-notebook-png-image-png-image-pngimg-2.png" class="card-img-top" alt="...">
+                <img src="https://img.freepik.com/free-photo/sport-running-shoes_1203-3414.jpg" class="card-img-top" alt="...">
                 <div class="label-top shadow-sm">Asus Rog</div> <div class="card-body">
                 <div class="clearfix mb-3"> <span class="float-start badge rounded-pill bg-success">12354.00&euro;</span>
                 <span class="float-end"><a href="#" class="small text-muted">Reviews</a></span>
@@ -176,7 +215,7 @@
             </div>
             </div>
                 <div class="col"> <div class="card h-100 shadow-sm">
-                    <img src="https://www.freepnglogos.com/uploads/notebook-png/notebook-laptop-png-images-you-can-download-mashtrelo-14.png" class="card-img-top" alt="...">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcROG1qzp4beKXx6C1CFPmqxp-iJ5e-BY8RTCEe44fCOSw&s" class="card-img-top" alt="...">
                     <div class="label-top shadow-sm">DELL</div>
                     <div class="card-body"> <div class="clearfix mb-3">
                         <span class="float-start price-hp">12354.00&euro;</span>
@@ -195,113 +234,6 @@
     </div>
     </div>
     </main>
-<!--&lt;!&ndash;    <main class="row mt-5 row-cols-lg-10 row-cols-10 row-cols-md-10 row-gap-md-5 flex-lg-row-reverse">&ndash;&gt;-->
-<!--        <div class="assignment">-->
-<!--            <div class="cart cart1">-->
-<!--                <div class="assignment_img">-->
-<!--                    <img class="image" src="assets/image/shoe.jpg" alt="speed" width="300">-->
-<!--                </div>-->
-<!--                <div>-->
-<!--                    <div class="text"  data-aos="flip-down"> Industrial men shoe</div>-->
-<!--                    <div class="text rs"  data-aos="flip-down"> RS:10000</div>-->
-<!--                    <div class="button">-->
-<!--                        <a href="https://github.com/Maneesha-lab705/MyPortfolio"><button>See More</button></a>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--            </div>-->
-
-<!--            <div class="cart cart2">-->
-<!--                <div class="assignment_img">-->
-<!--                    <img class="image" src="assets/image/Wild.png" alt="speed" width="300">-->
-<!--                </div>-->
-<!--                <div>-->
-<!--                    <div class="text"  data-aos="flip-down" >Assignment 02</div>-->
-<!--                    <div class="text rs"  data-aos="flip-down"> RS:10000</div>-->
-<!--                    <div class="button">-->
-<!--                        <a href="assets/image/dash.jpg"><button>See More</button></a>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--            </div>-->
-
-<!--            <div class="cart cart3">-->
-<!--                <div class="assignment_img">-->
-<!--                    <img  class="image" src="assets/image/nike.jpeg" alt="speed" width="300">-->
-<!--                </div>-->
-<!--                <div>-->
-<!--                    <div class="text" data-aos="flip-down">Assignment 03</div>-->
-<!--                    <div class="text rs"  data-aos="flip-down"> RS:10000</div>-->
-<!--                    <div class="button">-->
-<!--                        <a href="assert/assignmentHTML/assignment03.html"><button>See More</button></a>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--            </div>-->
-
-<!--            <div class="cart cart4">-->
-<!--                <div class="assignment_img">-->
-<!--                    <img class="image" src="assets/image/ss.jpeg" alt="speed" width="300">-->
-<!--                </div>-->
-<!--                <div>-->
-<!--                    <div class="text"  data-aos="flip-down">Assignment 04</div>-->
-<!--                    <div class="text rs"  data-aos="flip-down"> RS:10000</div>-->
-<!--                    <div class="button">-->
-<!--                        <a href="assert/assignmentHTML/assignment04.html"><button>See More</button></a>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--            </div>-->
-
-<!--            <div class="cart cart5">-->
-<!--                <div class="assignment_img">-->
-<!--                    <img  class="image" src="assets/image/aa.png" alt="speed" width="300">-->
-<!--                </div>-->
-<!--                <div>-->
-<!--                    <div class="text"  data-aos="flip-down">Assignment 05</div>-->
-<!--                    <div class="text rs"  data-aos="flip-down"> RS:10000</div>-->
-<!--                    <div class="button">-->
-<!--                        <button>see more</button>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--            </div>-->
-
-<!--            <div class="cart cart6">-->
-<!--                <div class="assignment_img">-->
-<!--                    <img  class="image" src="assets/image/wumen3.jpeg" alt="speed" width="300">-->
-<!--                </div>-->
-<!--                <div>-->
-<!--                    <div class="text"  data-aos="flip-down">Assignment 06</div>-->
-<!--                    <div class="text rs"  data-aos="flip-down"> RS:10000</div>-->
-<!--                    <div class="button">-->
-<!--                        <a href="https://github.com/Maneesha-lab705/Assignment-06"><button>See More</button></a>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--            </div>-->
-
-<!--            <div class="cart cart6">-->
-<!--                <div class="assignment_img">-->
-<!--                    <img  class="image" src="assets/image/wumen2.jpeg" alt="speed" width="300">-->
-<!--                </div>-->
-<!--                <div>-->
-<!--                    <div class="text"  data-aos="flip-down">Assignment 07</div>-->
-<!--                    <div class="text rs"  data-aos="flip-down"> RS:10000</div>-->
-<!--                    <div class="button">-->
-<!--                        <a href="assert/cases/assignment07/index.html"><button>See More</button></a>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--            </div>-->
-
-<!--            <div class="cart cart6">-->
-<!--                <div class="assignment_img">-->
-<!--                    <img class="image" src="assets/image/wumen1.jpeg" alt="speed" width="300">-->
-<!--                </div>-->
-<!--                <div>-->
-<!--                    <div class="text"  data-aos="flip-down">Assignment 08</div>-->
-<!--                    <div class="text rs"  data-aos="flip-down"> RS:10000</div>-->
-<!--                    <div class="button">-->
-<!--                        <a href="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.nike.com%2Fu%2Fcustom-nike-air-force-1-low-by-you-10001371&psig=AOvVaw2pGzNYUdn4ZZM-0pgYL46X&ust=1714558259785000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCKDs17XZ6YUDFQAAAAAdAAAAABAE"><button>See More</button></a>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--            </div>-->
-<!--        </div>-->
-<!--    </main>-->
 </div>
 </section>
 <!---------------------register form section-------->
@@ -431,7 +363,7 @@
 
 
             <!-- Customer Details Search Section Start -->
-            <div class="col-10 col-md-6 col-lg-5 p-0 mt-3 rounded-3 sectionBorder justify-content-md-center" style="background-color: white">
+            <div class="col-10 col-md-6 col-lg-5 p-0 mt-3 rounded-3 sectionBorder justify-content-md-center" style="background-color: black">
                 <!--            <div class="col-10 col-md-5 col-lg-5 p-0 mt-2 rounded-3 sectionBorder" style="background-color: white">-->
 
                 <form action="customer" id="customerForm">
@@ -528,7 +460,7 @@
             <!-- Customer Details Search Section Start -->
             <!--            <div class="col-10 col-md-6 col-lg-5 p-0 mt-5 rounded-3 sectionBorder"-->
             <div class="col-10 col-md-5 col-lg-5 p-0 mt-5 rounded-3 sectionBorder"
-                 style="background-color: white;height: max-content ">
+                 style="background-color: black;height: max-content ">
                 <h4 class="text-center p-2 text-light rounded-3" style="background: #16A085">Manage Customer</h4>
 
                 <div class="mb-3 ms-3 me-3 mt-3 ">
@@ -1028,7 +960,7 @@
         </div>
     </div>
 
-    <div class="container d-flex flex-grow-1 flex-column " style="background-color: transparent">
+    <div  id="invent" class="container d-flex flex-grow-1 flex-column " style="background-color: transparent">
 
         <div class="row" style="height: fit-content">
             <div class="col-10 col-md-6 col-lg-10 p-0 mt-3 rounded-3 sectionBorder" id="inventorySelectItem" >
@@ -1118,17 +1050,22 @@
                     <span class="control-error"></span>
                 </div>
             </div>
-            <div class="col-6 col-md-1 col-lg-5 p-0 mt-4 m-0 rounded-bottom sectionBorder "
-                 id="orderbtn">
+            <div class="col-6 col-md-1 col-lg-5 p-0 mt-4 me-lg-3 rounded-bottom sectionBorder " id="orderbtnsection">
                 <div class="m-4">
-                    <button class="btn btn-success mt-2 m-2" id="order" type="button">+Order
+                    <button class="btn btn-success mt-2 m-2" id="order" type="button" >+Order
                     </button>
                 </div>
-                <img src="assets/image/wumen2.jpeg" id="invenImage">
-                <label class="fw-bold" for="itemStatus">Item Status</label>
-                <input class="form-control" id="itemStatus" type="text">
-                <span class="control-error"></span>
             </div>
+<!--            <div class="col-6 col-md-1 col-lg-5 p-0 mt-5 m-0 rounded-bottom  " id="ordercart">-->
+<!--                <div class="m-4">-->
+<!--                    <button class="btn btn-success mt-2 m-2" id="order" type="button">+Order-->
+<!--                    </button>-->
+<!--                </div>-->
+<!--                <img src="assets/image/wumen2.jpeg" id="invenImage">-->
+<!--                <label class="fw-bold" for="itemStatus">Item Status</label>-->
+<!--                <input class="form-control" id="itemStatus" type="text">-->
+<!--                <span class="control-error"></span>-->
+<!--            </div>-->
         </div>
         </div>
 
@@ -1274,15 +1211,15 @@
     <!-- Order Header Start -->
     <div class="container d-flex flex-grow-1 flex-column">
         <div class="position-relative d-inline-block mt-3 mt-lg-4 mt-md-4">
-            <h2 id="H1-Order" style="font-family: 'Arial Rounded MT Bold',serif"><i
-                    class="bi bi-cart"></i> Place Order
+            <h2 id="H1-Order" style="font-family: 'Arial Rounded MT Bold',serif">
+                Place Order
             </h2>
         </div>
     </div>
     <!-- Order Header End -->
 
     <!-- Order Header Section Start -->
-    <div class="container d-flex flex-grow-1 flex-column sectionBorder" style="background-color: #dfe4ea">
+    <div id="orderBox" class="container d-flex flex-grow-1 flex-column sectionBorder" style="background-color: #dfe4ea">
         <div class="position-relative d-inline-block mt-3 mt-lg-4 mt-md-4">
             <h6 id="H6-Order">Home > Place Order</h6>
             <hr>
@@ -1293,7 +1230,7 @@
         <div class="row justify-content-around" style="height: min-content">
 
             <!-- Order Invoice Details Section Start -->
-            <div class="col-10 col-md-5 col-lg-4 p-3 mt-3 rounded-3 sectionBorder" style="background-color: white">
+            <div class="col-10 col-md-5 col-lg-4 p-3 mt-3 rounded-3 sectionBorder" style="background-color: black">
                 <h5 class="text-center p-2 text-light rounded-3" style="background: #16A085">Invoice Details</h5>
                 <div class="row mt-1">
                     <div class="col-12 col-md-6 col-lg-6">
@@ -1329,7 +1266,7 @@
             <!-- Order Invoice Details Section End -->
 
             <!-- Order Item Details Section Start -->
-            <div class="col-10 col-md-5 col-lg-4 p-3 mt-3 rounded-3 sectionBorder" style="background-color: white">
+            <div class="col-10 col-md-5 col-lg-4 p-3 mt-3 rounded-3 sectionBorder" style="background-color: black">
                 <h5 class="text-center p-2 text-light rounded-3" style="background: #16A085">Item Details</h5>
                 <div class="row mt-1">
                     <div class="col-12 col-md-6 col-lg-6">
@@ -1371,7 +1308,7 @@
             <!-- Order Item Details Section End -->
 
             <!-- Order Details Section Start -->
-            <div class="col-10 col-md-5 col-lg-3 p-3 mt-3 rounded-3 sectionBorder" style="background-color: white">
+            <div class="col-10 col-md-5 col-lg-3 p-3 mt-3 rounded-3 sectionBorder" style="background-color: black">
                 <h5 class="text-center bg-secondary p-2 text-light rounded-3">Payment Details</h5>
                 <div class="row mt-1">
                     <div class="col-12 col-md-6 col-lg-6">
@@ -1479,7 +1416,7 @@
                                     </p>
                                     <p class="mb-0">
                                         <span class="fw-bold">Price:</span>
-                                        <span class="c-green">:$452.90</span>
+                                        <input id="subtot" type="text" class="form-control" placeholder="Amount ">
                                     </p>
                                 </div>
                                 <div class="col-lg-7">
@@ -1520,7 +1457,7 @@
                 </div>
             </div>
             <div class="col-12 mt-5">
-                <button id="add_item" type="button" class="btn btn-primary">Pay</button>
+                <button id="btn_payment" type="button" class="btn btn-primary">Pay</button>
             </div>
         </div>
     </div>
@@ -1551,6 +1488,7 @@
 <script  src="controller/Item.js"></script>
 <script  src="controller/Orders.js"></script>
 <script src="controller/inventory.js"></script>
+<script src="controller/AdminPanelController.js"></script>
 
 
 <script>
@@ -1655,6 +1593,24 @@
         $('#inventorySection').css('display','none');
         $('#itemSection').css('display','none');
         $('#OrderSection').css('display','none');
+        $('.payment').css('display','none');
+        $('#order-section2').css('display','none');
+
+
+    });
+    $('#btn_payment').on('click',()=>{
+        $('#register_section').css('display','none');
+        $('.navbar').css('display','block');
+        $('#login').css('display','none');
+        // $(document.body).css('background-image', 'url(assets/image/Wild.png)');
+        $(document.body).css('background-color', '#121837');
+        $('#customer-section').css('display','none');
+        $('#employee-section').css('display','none');
+        $('.dashbord').css('display','none');
+        $('#supplier-section').css('display','none');
+        $('#inventorySection').css('display','none');
+        $('#itemSection').css('display','none');
+        $('#OrderSection').css('display','block');
         $('.payment').css('display','none');
         $('#order-section2').css('display','none');
 

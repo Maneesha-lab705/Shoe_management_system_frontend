@@ -1,4 +1,7 @@
 let token='';
+
+var userName = null;
+var role = null;
 $("#singUp").click(function () {
     console.log("user")
     var signupData = {
@@ -36,6 +39,7 @@ $("#singUp").click(function () {
 });
 
 $("#userLogingbtn").click(function () {
+    loadUserName()
     var signingData = {
         email: $('#loginEmail').val(),
         password: $('#loginPassword').val(),
@@ -75,6 +79,7 @@ const loadTable = () => {
     loaditemId()
     loadCustomerId()
     loadItemIdOrder()
+    loadtotalsales()
     $("#orderTotal").val(0);
 }
 const loadDashbord = () =>{
@@ -89,4 +94,28 @@ const loadDashbord = () =>{
     $('.bg-img').css('display','none');
 
 }
+function loadUserName() {
+    var selectedValue = $('#signingEmail').val();
 
+    $.ajax({
+        method: 'GET',
+        url: "http://localhost:8080/shoe/api/v1/auth/getUser",
+        async:true,
+        headers: {
+            'Authorization': 'Bearer ' + token
+        },
+        success: function (user) {
+            user.forEach(function (user) {
+                if (selectedValue === user.email){
+                    userName = user.name;
+                    role = user.role;
+                    console.log(userName)
+                    console.log(userName)
+                }
+            });
+        },
+        error: function (xhr, status, error) {
+            console.error("Failed to fetch item data. Status code:");
+        }
+    });
+};

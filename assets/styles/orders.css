@@ -1,11 +1,18 @@
 #order-section{
     top: 10vh;
 }
+#orderBox{
+    position: relative;
+    left: 10vw;
+}
 #order-section>title,.topic{
     color: red;
 }
 .orderDate{
     color: white;
+}
+#H1-Order{
+    color: red;
 }
 #lblCustomerid,#lblCustomerName,#lblItemCode,#lblDesc,#lblOrderQty,#lblPrice,#lblQty,#lblPaymentType{
     color: white;
@@ -35,4 +42,7 @@
 .payment{
     top: 10vh;
     width: 60vw;
+}
+.fw-bold{
+    color: white;
 }

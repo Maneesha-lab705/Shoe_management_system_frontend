@@ -68,7 +68,6 @@ function getSelectedRadioButtonValue() {
 }
 
 function fetchEmployeeData() {
-    console.log(token)
     var tableBody = $('#employeetbl');
 
     $.ajax({

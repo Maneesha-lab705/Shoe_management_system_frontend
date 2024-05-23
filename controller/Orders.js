@@ -1,6 +1,10 @@
+let unitPriceCost = 0;
+let unitPriceAllCost = 0;
+let orderItemPic = null;
 /**
  * Load Customer Id
  **/
+
 const loadCustomerId = () => {
     $.ajax({
         method: 'GET',
@@ -86,9 +90,13 @@ const loadItemIdOrder = () => {
     });
 };
 $("#paymentMethod").on("change", function() {
+    $('#subtot').val("");
+    var tot=parseInt($("#orderSubTotal").val())
     if ($("#paymentMethod").val() === 'CARD'){
+        $("#subtot").val(tot);
+        console.log(tot)
         $('.payment').css('display','block');
-        $('#OrderSection').css('display','none');
+        // $('#OrderSection').css('display','none');
     }
 })
 /**
@@ -136,6 +144,8 @@ $("#itemOrderSize").on('input', function(event) {
         success: function (item) {
             $("#qtyOnHandOrder").val(item.qty)
             $("#itemPrice").val(item.unitPriceSale)
+            unitPriceCost = item.unitPriceBuy;
+            orderItemPic = item.pic
 
         },
         error: function(xhr, status, error) {
@@ -181,6 +191,7 @@ $("#btnAddToCartOrder").on("click", () => {
             $(this).find("td:nth-child(5)").text(existingQty + qty);
             $(this).find("td:nth-child(6)").text(existingTotal + total);
             netTotalOrder(total)
+            netCostOrder(qty,unitPriceCost)
             clearItemData();
             return false;
         }
@@ -197,6 +208,7 @@ $("#btnAddToCartOrder").on("click", () => {
         );
         $("#tblOrder").append(newRow);
         netTotalOrder(total)
+        netCostOrder(qty,unitPriceCost)
         clearItemData();
     }
 });
@@ -204,15 +216,17 @@ $("#btnAddToCartOrder").on("click", () => {
  * Place Order
  **/
 $("#btnPurchaseOrder").on("click", () => {
-    var subTotal = parseInt($("#orderSubTotal").val());
+    var subTotal=parseInt($("#orderSubTotal").val());
     var point = subTotal / 800;
-
+    console.log(new Date('2024-05-22'))
     var orderDTO = {
         customerName :  $("#customerName").val(),
         amount: subTotal,
-        date:Date.now(),
+        // date:new Date('2024-05-22'),
         payment:$("#paymentMethod").val(),
         point: point,
+        userName:userName,
+        profit:subTotal - unitPriceAllCost
     };
 
     var orderItemDTOS = getOrderDetailArray();
@@ -222,34 +236,34 @@ $("#btnPurchaseOrder").on("click", () => {
         orderItemDTOS: orderItemDTOS,
     };
 
-    console.log(postData)
 
-    $.ajax({
-        method:"POST",
-        contentType:"application/json",
-        url:"http://localhost:8080/shoe/api/v1/orders",
-        async:true,
-        headers: {
-            'Authorization': 'Bearer ' + token
-        },
-        data:JSON.stringify(postData),
-        success: function() {
-            Swal.fire(
-                'Success!',
-                'Order has been saved successfully!',
-                'success'
-            );
-            clearItemData();
-            clearCustomerData();
-        },
-        error: function() {
-            Swal.fire(
-                'Error!',
-                'Order has been saved unsuccessfully!',
-                'error'
-            );
-        }
-    });
+
+      $.ajax({
+          method: "POST",
+          contentType: "application/json",
+          url: "http://localhost:8080/shoe/api/v1/orders",
+          async: true,
+          headers: {
+              'Authorization': 'Bearer ' + token
+          },
+          data: JSON.stringify(postData),
+          success: function () {
+              Swal.fire(
+                  'Success!',
+                  'Order has been saved successfully!',
+                  'success'
+              );
+              clearItemData();
+              clearCustomerData();
+          },
+          error: function () {
+              Swal.fire(
+                  'Error!',
+                  'Order has been saved unsuccessfully!',
+                  'error'
+              );
+          }
+      });
 });
 /**
  * Generate Total
@@ -304,4 +318,43 @@ function getOrderDetailArray() {
     });
 
     return orderDetailArray;
+}
+function loadtotalsales() {
+    var currentDate = new Date();
+
+    // Get the date components
+    var year = currentDate.getFullYear();
+    var month = (currentDate.getMonth() + 1).toString().padStart(2, '0'); // Month is zero-based
+    var day = currentDate.getDate().toString().padStart(2, '0');
+
+    // Concatenate the date components
+    var dateString = year + '-' + month + '-' + day;
+
+    console.log(dateString)
+    $.ajax({
+        method: 'GET',
+        url: "http://localhost:8080/shoe/api/v1/orders/getsales",
+        async: true,
+        headers: {
+            'Authorization': 'Bearer ' + token
+        },
+        success: function (orderData) {
+                    console.log(orderData)
+            orderData.forEach(function (orders) {
+
+                });
+
+        },
+        data: {
+            date: dateString
+        },
+        error: function (xhr, status, error) {
+            console.error("Failed to fetch customer data. Status code:", status,error);
+        }
+    });
+}
+const netCostOrder = (qty,unitPriceCost) => {
+    let netCost = unitPriceAllCost;
+    let addCost = (qty*unitPriceCost);
+    unitPriceAllCost = netCost + addCost;
 }
